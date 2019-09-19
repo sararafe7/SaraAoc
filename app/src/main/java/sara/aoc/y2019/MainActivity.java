@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity  {
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity  {
 
         String password = getIntent().getStringExtra(("password"));
 
-        String email = getIntent().getStringExtra((name:"email"));
+        String email = getIntent().getStringExtra(("email"));
 
         tvEmail = findViewById(R.id.tvEmail);
         tvPassword = findViewById(R.id.tvPassword);
