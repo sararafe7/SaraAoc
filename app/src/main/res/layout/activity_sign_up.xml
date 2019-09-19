@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
+        android:hint="First Name"
         tools:layout_editor_absoluteX="60dp"
         tools:layout_editor_absoluteY="222dp" />
 
@@ -35,6 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
+        android:hint="Email"
         tools:layout_editor_absoluteX="61dp"
         tools:layout_editor_absoluteY="316dp" />
 
