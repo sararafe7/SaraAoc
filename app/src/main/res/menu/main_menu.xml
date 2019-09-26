@@ -6,7 +6,7 @@
         android:id="@+id/settings"
         android:title="Settings" />
     <item
-        android:id="@+id/addre/cipe"
+        android:id="@+id/addrecipe"
         android:title="Add Recipe" />
     <item
         android:id="@+id/logout"
