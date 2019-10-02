@@ -5,10 +5,14 @@
     <item
         android:id="@+id/settings"
         android:title="Settings" />
+        //android:icon=
+    //not sure about the add recipe
     <item
         android:id="@+id/addrecipe"
         android:title="Add Recipe" />
+        //android:icon=
     <item
         android:id="@+id/logout"
         android:title="LogOut" />
+        //android:icon=
 </menu>

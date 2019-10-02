@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class LogInActivity extends AppCompatActivity implements View.OnClickListener {
 
-    //1.properties defenition
+    //1.properties definition
     EditText editTextEmail, editTextPassword;
     Button buttonLogIn, buttonSignUp;
 
@@ -27,7 +27,10 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
         editTextPassword = findViewById(R.id.editTextPassword);
 
         buttonLogIn = findViewById(R.id.buttonLogIn);
+        buttonLogIn.setOnClickListener(this);
+
         buttonSignUp = findViewById(R.id.buttonSignUp);
+        buttonSignUp.setOnClickListener(this);
     }
 
     @Override
@@ -40,8 +43,29 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
-        return super.onOptionsItemSelected(item);
+        //return super.onOptionsItemSelected(item);
+        Intent goToNextActivity;
 
+        switch(item.getItemId()){
+
+            case R.id.settings:
+
+                goToNextActivity = new Intent(getApplicationContext(),SettingsActivity.class);
+                startActivity(goToNextActivity);
+                break;
+
+            case R.id.addrecipe:
+                goToNextActivity = new Intent(getApplicationContext(),AddRecipeActivity.class);
+                startActivity(goToNextActivity);
+                break;
+
+            case R.id.logout:
+                goToNextActivity = new Intent(getApplicationContext(),LogInActivity.class);
+                startActivity(goToNextActivity);
+                break;
+
+        }
+        return true;
     }
 
     @Override
@@ -52,7 +76,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
                 Toast.makeText(this, "Empty Password or Email", Toast.LENGTH_LONG).show();
             }
             else {
-                Intent i = new Intent(this, MainActivity.class);
+                Intent i = new Intent(this, ClockActivity.class);
                 i.putExtra("email", editTextEmail.getText().toString());
                 i.putExtra("password", editTextPassword.getText().toString());
                 startActivity(i);
@@ -60,7 +84,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
         }
 
         else{
-            Intent i = new Intent (this, ClockActivity.class);
+            Intent i = new Intent (this, SignUpActivity.class);
             startActivity(i);
         }
     }

@@ -18,14 +18,6 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String password = getIntent().getStringExtra(("password"));
 
-        String email = getIntent().getStringExtra(("email"));
-
-        tvEmail = findViewById(R.id.tvEmail);
-        tvPassword = findViewById(R.id.tvPassword);
-
-        tvEmail.setText(email);
-        tvPassword.setText(password);
     }
 }
