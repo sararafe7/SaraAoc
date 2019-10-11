@@ -44,7 +44,7 @@ public class MealsActivity extends AppCompatActivity {
                         Intent i = new Intent(this, BreakfastActivity);
 
                     })
-                            .setNegative
+                       //     .setNegative
                 });
 
     }
