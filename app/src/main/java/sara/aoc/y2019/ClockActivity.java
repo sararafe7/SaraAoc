@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import java.util.Date;
@@ -19,6 +20,8 @@ public class ClockActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clock2);
+
+        GetCurrentDateTime();
     }
 
     @Override
@@ -33,16 +36,11 @@ public class ClockActivity extends AppCompatActivity {
         return true;
     }
 
-    public class GetCurrentDateTime {
-        public static void main(String[] args) {
-            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-            //get current date time with Date()
-            Date date = new Date();
-            System.out.println(dateFormat.format(date));
+    public static Date GetCurrentDateTime() {
+        Date currentTime = Calendar.getInstance().getTime();
+        Log.d("Time", currentTime.toString());
 
-            //get current date time with Calendar()
-            Calendar cal = Calendar.getInstance();
-            System.out.println(dateFormat.format(cal.getTime()));
-        }
+        return currentTime;
     }
+
 }
