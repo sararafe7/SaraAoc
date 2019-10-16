@@ -15,9 +15,9 @@
         <activity android:name=".AddRecipeActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".LogInActivity" />
-        <activity android:name=".MealsActivity" />
+        <activity android:name=".ClockActivity" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".ClockActivity">
+        <activity android:name=".MealsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
