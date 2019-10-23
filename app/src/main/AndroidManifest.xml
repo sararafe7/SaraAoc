@@ -15,10 +15,10 @@
         <activity android:name=".ListView" />
         <activity android:name=".AddRecipeActivity" />
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".LogInActivity" />
-        <activity android:name=".ClockActivity" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".MealsActivity">
+        <activity android:name=".ClockActivity" />
+        <activity android:name=".MealsActivity" />
+        <activity android:name=".LogInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
