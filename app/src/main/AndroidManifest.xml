@@ -9,21 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BreakfastActivity"></activity>
+        <activity android:name=".SnacksActivity"></activity>
+        <activity android:name=".SweetsActivity" />
+        <activity android:name=".VeganActivity" />
+        <activity android:name=".DinnerActivity" />
+        <activity android:name=".LunchActivity" />
+        <activity android:name=".BreakfastActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".CameraActivity" />
         <activity android:name=".ListView" />
         <activity android:name=".AddRecipeActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".MealsActivity" />
         <activity android:name=".IngredientsListActivity" />
+        <activity android:name=".LogInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        <activity android:name=".LogInActivity" />
+        </activity>
+        <activity android:name=".MealsActivity" />
     </application>
 
 </manifest>

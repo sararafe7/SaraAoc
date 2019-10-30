@@ -8,14 +8,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
 import java.util.Calendar;
 
-public class MealsActivity extends AppCompatActivity {
+import sara.aoc.y2019.BreakfastActivity;
+import sara.aoc.y2019.R;
+
+public class MealsActivity extends AppCompatActivity implements View.OnClickListener{
+
+    Button btnBreakfast, btnLunch, btnDinner, btnVegan, btnSweets, btnSnacks;
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meals);
+
+        btnBreakfast = findViewById(R.id.btnBreakfast);
+        btnLunch = findViewById(R.id.btnLunch);
+        btnDinner = findViewById(R.id.btnDinner);
+        btnVegan = findViewById(R.id.btnVegan);
+        btnSweets = findViewById(R.id.btnSweets);
+        btnSnacks = findViewById(R.id.btnSnacks);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(MealsActivity.this);
 //        if (MealName() != null) {
@@ -26,16 +40,43 @@ public class MealsActivity extends AppCompatActivity {
 
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialogInterface, int which) {
-                Intent i = new Intent(MealsActivity.this, BreakfastActivity.class);
-                startActivity(i);
+            public void onClick(DialogInterface dialogInterface, int i) {
+                if (MealName().equals("Breakfast")) {
+                    Intent intent = new Intent(MealsActivity.this, BreakfastActivity.class);
+                    startActivity(intent);
+                }
+                if (MealName().equals("Lunch")) {
+                    Intent intent = new Intent(MealsActivity.this, LunchActivity.class);
+                    startActivity(intent);
+                }
+
+                if (MealName().equals("Dinner")) {
+                Intent intent = new Intent(MealsActivity.this, DinnerActivity.class);
+                startActivity(intent);
+            }
+
+
+                if (MealName().equals("Vegan")) {
+                Intent intent = new Intent(MealsActivity.this, VeganActivity.class);
+                startActivity(intent);
+            }
+
+
+                if (MealName().equals("Sweets")) {
+                Intent intent = new Intent(MealsActivity.this, SweetsActivity.class);
+                startActivity(intent);
+            }
+                if (MealName().equals("Snacks")){
+                Intent intent = new Intent(MealsActivity.this, SnacksActivity.class);
+                startActivity(intent);
+            }
             }
         });
+
         AlertDialog dialog = builder.create();
         dialog.show();
-    }
-//    }
 
+}
     public static String HourMinute() {
         Calendar cal = Calendar.getInstance();
         int hour = cal.get(Calendar.HOUR);
@@ -80,6 +121,34 @@ public class MealsActivity extends AppCompatActivity {
 
         }
         return null;
+    }
+
+    @Override
+    public void onClick(View view) {
+        if(view == btnBreakfast){
+            Intent i = new Intent(this, BreakfastActivity.class);
+            startActivity(i);
+        }
+        if(view == btnLunch){
+            Intent i = new Intent(this, LunchActivity.class);
+            startActivity(i);
+        }
+        if(view == btnDinner){
+            Intent i = new Intent(this, DinnerActivity.class);
+            startActivity(i);
+        }
+        if(view == btnVegan){
+            Intent i = new Intent(this, VeganActivity.class);
+            startActivity(i);
+        }
+        if(view == btnSweets){
+            Intent i = new Intent(this, SweetsActivity.class);
+            startActivity(i);
+        }
+        if(view == btnSnacks){
+            Intent i = new Intent(this, SnacksActivity.class);
+            startActivity(i);
+        }
     }
 }
 

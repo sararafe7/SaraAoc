@@ -2,7 +2,75 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MealsActivity"/>
+    android:orientation="vertical"
+    tools:context=".MealsActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose The Meal You Would Like to Prepare:" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBreakfast"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:text="Breakfast" />
+
+        <Button
+            android:id="@+id/btnLunch"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Lunch" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnDinner"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Dinner" />
+
+        <Button
+            android:id="@+id/btnVegan"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Vegan" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSweets"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Sweets" />
+
+        <Button
+            android:id="@+id/btnSnacks"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:text="Snacks" />
+
+    </LinearLayout>
+
+</LinearLayout>
