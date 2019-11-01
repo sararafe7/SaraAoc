@@ -25,7 +25,9 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_meals);
 
         btnBreakfast = findViewById(R.id.btnBreakfast);
+        btnBreakfast.setOnClickListener(this);
         btnLunch = findViewById(R.id.btnLunch);
+
         btnDinner = findViewById(R.id.btnDinner);
         btnVegan = findViewById(R.id.btnVegan);
         btnSweets = findViewById(R.id.btnSweets);
