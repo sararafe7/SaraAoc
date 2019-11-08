@@ -3,12 +3,49 @@ package sara.aoc.y2019;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class LunchActivity extends AppCompatActivity {
+
+    ListView lvIngredients;
+    CustomAdapter2 adapter2;
+    ArrayList<IngredientsCheck> arrIc = new ArrayList<IngredientsCheck>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lunch);
+
+        arrIc.add(new IngredientsCheck(false, "sa"));
+        arrIc.add(new IngredientsCheck(false, "sa"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+
+
+        lvIngredients=(ListView) findViewById(R.id.lvIngredients);
+        adapter2 = new CustomAdapter2(this, R.layout.ingredients, arrIc);
+        lvIngredients.setAdapter(adapter2);
+
     }
 }

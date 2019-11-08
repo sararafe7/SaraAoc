@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,6 +25,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
     //1.properties definition
     EditText editTextEmail, editTextPassword;
     Button buttonLogIn, buttonSignUp;
+    TextView textView;
 
     private FirebaseAuth mAuth;
 
@@ -42,8 +44,11 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
         buttonLogIn = findViewById(R.id.buttonLogIn);
         buttonLogIn.setOnClickListener(this);
 
-        buttonSignUp = findViewById(R.id.buttonSignUp);
-        buttonSignUp.setOnClickListener(this);
+       // buttonSignUp = findViewById(R.id.buttonSignUp);
+       // buttonSignUp.setOnClickListener(this);
+
+        textView = findViewById(R.id.textView);
+        textView.setOnClickListener(this);
 
 
     }

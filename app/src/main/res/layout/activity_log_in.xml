@@ -47,4 +47,15 @@
         android:background="@drawable/button_background2"
         android:text="SignUp" />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="14dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="still don't have an account? SIGN UP" />
+
 </LinearLayout>

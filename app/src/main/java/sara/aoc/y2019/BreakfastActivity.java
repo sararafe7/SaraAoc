@@ -24,8 +24,28 @@ public class BreakfastActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breakfast);
 
-        arrIc.add(new IngredientsCheck(false, "sa"));
-        arrIc.add(new IngredientsCheck(false, "sa"));
+        arrIc.add(new IngredientsCheck(false, "Eggs"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Cornflakes"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Milk"));
 
 
 
