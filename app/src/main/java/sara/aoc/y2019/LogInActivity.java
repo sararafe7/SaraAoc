@@ -25,7 +25,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
     //1.properties definition
     EditText editTextEmail, editTextPassword;
     Button buttonLogIn, buttonSignUp;
-    TextView textView;
+    TextView tvSignUp;
 
     private FirebaseAuth mAuth;
 
@@ -38,18 +38,14 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
         mAuth = FirebaseAuth.getInstance();
 
         //initialize properties
-        editTextEmail = findViewById(R.id.editTextEmail);
+        editTextEmail = findViewById(R.id.etEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
 
         buttonLogIn = findViewById(R.id.buttonLogIn);
         buttonLogIn.setOnClickListener(this);
 
-       // buttonSignUp = findViewById(R.id.buttonSignUp);
-       // buttonSignUp.setOnClickListener(this);
-
-        textView = findViewById(R.id.textView);
-        textView.setOnClickListener(this);
-
+        tvSignUp = findViewById(R.id.tvSignUp);
+        tvSignUp.setOnClickListener(this);
 
     }
 

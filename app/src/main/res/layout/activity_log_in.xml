@@ -8,7 +8,7 @@
     tools:context=".LogInActivity">
 
     <EditText
-        android:id="@+id/editTextEmail"
+        android:id="@+id/etEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="25dp"
@@ -37,22 +37,10 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="36dp" />
-
-    <Button
-        android:id="@+id/buttonSignUp"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@drawable/button_background2"
-        android:text="SignUp" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="14dp" />
+        android:layout_height="21dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"

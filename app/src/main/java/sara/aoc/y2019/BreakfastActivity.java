@@ -2,14 +2,10 @@ package sara.aoc.y2019;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.ClipData;
-import android.content.Context;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
 import android.widget.ListView;
-import java.util.List;
 
 
 public class BreakfastActivity extends AppCompatActivity {
@@ -27,17 +23,16 @@ public class BreakfastActivity extends AppCompatActivity {
         arrIc.add(new IngredientsCheck(false, "Eggs"));
         arrIc.add(new IngredientsCheck(false, "Milk"));
         arrIc.add(new IngredientsCheck(false, "Cornflakes"));
+        arrIc.add(new IngredientsCheck(false, "Bacon"));
+        arrIc.add(new IngredientsCheck(false, "Flour"));
+        arrIc.add(new IngredientsCheck(false, "Tomato"));
+        arrIc.add(new IngredientsCheck(false, "Cheese"));
         arrIc.add(new IngredientsCheck(false, "Milk"));
-        arrIc.add(new IngredientsCheck(false, "Milk"));
-        arrIc.add(new IngredientsCheck(false, "Milk"));
-        arrIc.add(new IngredientsCheck(false, "Milk"));
-        arrIc.add(new IngredientsCheck(false, "Milk"));
-        arrIc.add(new IngredientsCheck(false, "Milk"));
-        arrIc.add(new IngredientsCheck(false, "Milk"));
-        arrIc.add(new IngredientsCheck(false, "Milk"));
-        arrIc.add(new IngredientsCheck(false, "Milk"));
-        arrIc.add(new IngredientsCheck(false, "Milk"));
-        arrIc.add(new IngredientsCheck(false, "Milk"));
+        arrIc.add(new IngredientsCheck(false, "Salt"));
+        arrIc.add(new IngredientsCheck(false, "Sugar"));
+        arrIc.add(new IngredientsCheck(false, "Pepper"));
+        arrIc.add(new IngredientsCheck(false, "Cucumber"));
+        arrIc.add(new IngredientsCheck(false, "Thyme"));
         arrIc.add(new IngredientsCheck(false, "Milk"));
         arrIc.add(new IngredientsCheck(false, "Milk"));
         arrIc.add(new IngredientsCheck(false, "Milk"));
