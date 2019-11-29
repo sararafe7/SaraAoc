@@ -13,8 +13,9 @@
         android:layout_height="wrap_content"
         android:text="Check next to the ingredients you have: " />
 
-    <ListView
-        android:id="@+id/lvIng"
+    <ExpandableListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:id="@+id/expandableListViewIng"/>
+
 </LinearLayout>

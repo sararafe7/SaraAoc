@@ -11,7 +11,7 @@
         android:id="@+id/tvSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose The Meal You Would Like to Prepare:" />
+        android:text="Choose The Meal You Would Like to cook:" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,5 +72,15 @@
             android:text="Snacks" />
 
     </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="49dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Would You Like Prepare Your Own Meal?" />
 
 </LinearLayout>
