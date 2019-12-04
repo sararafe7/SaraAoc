@@ -71,7 +71,7 @@ public class MainAdapter extends BaseExpandableListAdapter {
         if (view == null) {
             LayoutInflater layoutInflater = (LayoutInflater) this.context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = layoutInflater.inflate(R.layout.list_category, null)
+            view = layoutInflater.inflate(R.layout.list_category, null);
         }
 
         TextView textView = view.findViewById(R.id.list_parent);
@@ -83,11 +83,19 @@ public class MainAdapter extends BaseExpandableListAdapter {
     public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
         //i=groupPosition
         //i1=childPosition
-        String Child = (String) getChild(i, i1);
+        String child = (String) getChild(i, i1);
+        if (view == null) {
+            LayoutInflater layoutInflater = (LayoutInflater) this.context
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            view = layoutInflater.inflate(R.layout.list_ing_check, null);
+        }
+        TextView textView = view.findViewById(R.id.list_child);
+        textView.setText(child);
+        return view;
     }
 
     @Override
     public boolean isChildSelectable(int i, int i1) {
-        return false;
+        return true;
     }
 }

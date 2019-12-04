@@ -13,7 +13,7 @@ import java.util.List;
 public class IngredientsListActivity extends AppCompatActivity {
 
     ExpandableListView expandableListViewIng;
-    List<String> listCategories;
+    List<String> listCategory;
     HashMap<String,List<String>> listIngCheck;
     MainAdapter adapter;
 
@@ -23,22 +23,24 @@ public class IngredientsListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ingredients_list);
 
         expandableListViewIng = findViewById(R.id.expandableListViewIng);
-        listCategories = new ArrayList<>();
+        listCategory = new ArrayList<>();
         listIngCheck = new HashMap<>();
+        adapter = new MainAdapter(this, listCategory, listIngCheck);
+        expandableListViewIng.setAdapter(adapter);
         initListData();
     }
 
     private void initListData() {
-        listCategories.add(getString(R.string.Category1));
-        listCategories.add(getString(R.string.Category2));
-        listCategories.add(getString(R.string.Category3));
-        listCategories.add(getString(R.string.Category4));
-        listCategories.add(getString(R.string.Category5));
-        listCategories.add(getString(R.string.Category6));
-        listCategories.add(getString(R.string.Category7));
-        listCategories.add(getString(R.string.Category8));
-        listCategories.add(getString(R.string.Category9));
-        listCategories.add(getString(R.string.Category10));
+        listCategory.add(getString(R.string.Category1));
+        listCategory.add(getString(R.string.Category2));
+        listCategory.add(getString(R.string.Category3));
+        listCategory.add(getString(R.string.Category4));
+        listCategory.add(getString(R.string.Category5));
+        listCategory.add(getString(R.string.Category6));
+        listCategory.add(getString(R.string.Category7));
+        listCategory.add(getString(R.string.Category8));
+        listCategory.add(getString(R.string.Category9));
+        listCategory.add(getString(R.string.Category10));
 
         String[] array;
 
@@ -92,15 +94,16 @@ public class IngredientsListActivity extends AppCompatActivity {
         for (String ingredientCheck : array)
             list10.add(ingredientCheck);
 
-        listIngCheck.put(listCategories.get(0), list1);
-        listIngCheck.put(listCategories.get(1), list2);
-        listIngCheck.put(listCategories.get(2), list3);
-        listIngCheck.put(listCategories.get(3), list4);
-        listIngCheck.put(listCategories.get(4), list5);
-        listIngCheck.put(listCategories.get(5), list6);
-        listIngCheck.put(listCategories.get(6), list7);
-        listIngCheck.put(listCategories.get(7), list8);
-        listIngCheck.put(listCategories.get(8), list9);
-        listIngCheck.put(listCategories.get(9), list10);
+        listIngCheck.put(listCategory.get(0), list1);
+        listIngCheck.put(listCategory.get(1), list2);
+        listIngCheck.put(listCategory.get(2), list3);
+        listIngCheck.put(listCategory.get(3), list4);
+        listIngCheck.put(listCategory.get(4), list5);
+        listIngCheck.put(listCategory.get(5), list6);
+        listIngCheck.put(listCategory.get(6), list7);
+        listIngCheck.put(listCategory.get(7), list8);
+        listIngCheck.put(listCategory.get(8), list9);
+        listIngCheck.put(listCategory.get(9), list10);
+        adapter.notifyDataSetChanged();
     }
 }

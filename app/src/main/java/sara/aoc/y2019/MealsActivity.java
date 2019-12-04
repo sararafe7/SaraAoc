@@ -17,7 +17,7 @@ import sara.aoc.y2019.R;
 
 public class MealsActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button btnBreakfast, btnLunch, btnDinner, btnVegan, btnSweets, btnSnacks;
+    Button btnBreakfast, btnLunch, btnDinner, btnVegan, btnSweets, btnSnacks, btnIngCheck;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,11 +27,17 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
         btnBreakfast = findViewById(R.id.btnBreakfast);
         btnBreakfast.setOnClickListener(this);
         btnLunch = findViewById(R.id.btnLunch);
-
+        btnLunch.setOnClickListener(this);
         btnDinner = findViewById(R.id.btnDinner);
+        btnDinner.setOnClickListener(this);
         btnVegan = findViewById(R.id.btnVegan);
+        btnVegan.setOnClickListener(this);
         btnSweets = findViewById(R.id.btnSweets);
+        btnSweets.setOnClickListener(this);
         btnSnacks = findViewById(R.id.btnSnacks);
+        btnSnacks.setOnClickListener(this);
+        btnIngCheck = findViewById(R.id.btnIngCheck);
+        btnIngCheck.setOnClickListener(this);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(MealsActivity.this);
 //        if (MealName() != null) {
@@ -51,27 +57,22 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
                     Intent intent = new Intent(MealsActivity.this, LunchActivity.class);
                     startActivity(intent);
                 }
-
                 if (MealName().equals("Dinner")) {
-                Intent intent = new Intent(MealsActivity.this, DinnerActivity.class);
-                startActivity(intent);
-            }
-
-
+                    Intent intent = new Intent(MealsActivity.this, DinnerActivity.class);
+                    startActivity(intent);
+                }
                 if (MealName().equals("Vegan")) {
-                Intent intent = new Intent(MealsActivity.this, VeganActivity.class);
-                startActivity(intent);
-            }
-
-
+                    Intent intent = new Intent(MealsActivity.this, VeganActivity.class);
+                    startActivity(intent);
+                }
                 if (MealName().equals("Sweets")) {
-                Intent intent = new Intent(MealsActivity.this, SweetsActivity.class);
-                startActivity(intent);
-            }
+                    Intent intent = new Intent(MealsActivity.this, SweetsActivity.class);
+                    startActivity(intent);
+                }
                 if (MealName().equals("Snacks")){
-                Intent intent = new Intent(MealsActivity.this, SnacksActivity.class);
-                startActivity(intent);
-            }
+                    Intent intent = new Intent(MealsActivity.this, SnacksActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
@@ -79,6 +80,7 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
         dialog.show();
 
 }
+
     public static String HourMinute() {
         Calendar cal = Calendar.getInstance();
         int hour = cal.get(Calendar.HOUR);
@@ -149,6 +151,10 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
         }
         if(view == btnSnacks){
             Intent i = new Intent(this, SnacksActivity.class);
+            startActivity(i);
+        }
+        if(view == btnIngCheck){
+            Intent i = new Intent(this, IngredientsListActivity.class);
             startActivity(i);
         }
     }
