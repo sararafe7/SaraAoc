@@ -17,7 +17,7 @@ import sara.aoc.y2019.R;
 
 public class MealsActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button btnBreakfast, btnLunch, btnDinner, btnVegan, btnSweets, btnSnacks, btnIngCheck;
+    Button btnBreakfast, btnLunch, btnDinner, btnVegan, btnSweets, btnSnacks, btnIngCheck, btnDone;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,8 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
         btnSnacks.setOnClickListener(this);
         btnIngCheck = findViewById(R.id.btnIngCheck);
         btnIngCheck.setOnClickListener(this);
+//        btnDone = findViewById(R.id.btnDone);
+//        btnDone.setOnClickListener(this);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(MealsActivity.this);
 //        if (MealName() != null) {

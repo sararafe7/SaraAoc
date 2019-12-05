@@ -54,6 +54,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     public void signUp (String email, String password){
+        Toast.makeText(SignUpActivity.this, email+":"+password, Toast.LENGTH_LONG).show();
+
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -62,6 +64,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("FirebaseAuth", "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            Toast.makeText(SignUpActivity.this, user.getEmail(), Toast.LENGTH_LONG).show();
+
                             //updateUI(user);
                                 Intent i = new Intent(SignUpActivity.this, MealsActivity.class);
                                 startActivity(i);
@@ -69,6 +73,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
                         } else {
                             // If sign in fails, display a message to the user.
+                            Toast.makeText(SignUpActivity.this, "FAILED", Toast.LENGTH_LONG).show();
+
                             Log.w("FirebaseAuth", "createUserWithEmail:failure", task.getException());
                             Toast.makeText(SignUpActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();

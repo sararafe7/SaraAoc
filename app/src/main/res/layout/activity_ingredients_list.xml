@@ -14,8 +14,29 @@
         android:text="Check next to the ingredients you have: " />
 
     <ExpandableListView
+        android:id="@+id/expandableListViewIng"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/expandableListViewIng"/>
+        android:layout_height="568dp">
+
+    </ExpandableListView>
+
+    <CheckedTextView
+        android:id="@+id/tvDone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:checkMark="@drawable/checkbox"
+        android:gravity="center"
+        android:text="Done" />
+
+    <CheckedTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:checkMark="@android:drawable/checkbox_on_background"
+        android:gravity="center"
+        android:text="Done"
+        android:textAlignment="gravity" />
+
 
 </LinearLayout>

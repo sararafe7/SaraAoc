@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.LauncherActivity;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ public class IngredientsListActivity extends AppCompatActivity {
     List<String> listCategory;
     HashMap<String,List<String>> listIngCheck;
     MainAdapter adapter;
+    Button btnDone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class IngredientsListActivity extends AppCompatActivity {
         adapter = new MainAdapter(this, listCategory, listIngCheck);
         expandableListViewIng.setAdapter(adapter);
         initListData();
+//        btnDone.findViewById(R.id.btnDone);
     }
 
     private void initListData() {
