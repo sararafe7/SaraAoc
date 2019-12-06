@@ -12,19 +12,25 @@
     <string name="Category9">category9</string>
     <string name="Category10">category10</string>
     <string-array name="Category1">
-        <item>Haneen</item>
-        <item>item2</item>
-        <item>item3</item>
-        <item>item4</item>
-        <item>item5</item>
-        <item>item6</item>
-        <item>item7</item>
-        <item>item8</item>
-        <item>item9</item>
-        <item>item10</item>
+        <item name="item1">Avocado</item>
+        <item name="item2">Broccoli</item>
+        <item name="item3">Carrot</item>
+        <item name="item4">Cucumber</item>
+        <item name="item9">Eggplant</item>
+        <item name="item5">Fennel</item>
+        <item name="item6">Lettuce</item>
+        <item name="item10">Onion</item>
+        <item name="item8">Pepper</item>
+        <item name="item11">Potato</item>
+        <item name="item7">Tomato</item>
+        <item name="item12">Mushroom</item>
+        <item name="item12">Garlic</item>
+        <item name="item12">Sweet Potato</item>
+        <item name="item12">Corn</item>
+        <item name="item12">Parsley</item>
     </string-array>
     <string-array name="Category2">
-        <item>item1</item>
+        <item>item1lemon</item>
         <item>item2</item>
         <item>item3</item>
         <item>item4</item>

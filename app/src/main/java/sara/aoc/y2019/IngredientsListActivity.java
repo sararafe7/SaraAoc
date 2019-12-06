@@ -3,26 +3,31 @@ package sara.aoc.y2019;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.LauncherActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.CheckedTextView;
 import android.widget.ExpandableListView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class IngredientsListActivity extends AppCompatActivity {
+public class IngredientsListActivity extends AppCompatActivity implements View.OnClickListener {
 
     ExpandableListView expandableListViewIng;
     List<String> listCategory;
     HashMap<String,List<String>> listIngCheck;
     MainAdapter adapter;
-    Button btnDone;
-
+    CheckedTextView chtvDone;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingredients_list);
+
+        chtvDone=findViewById(R.id.chtvDone);
+        chtvDone.setOnClickListener(this);
 
         expandableListViewIng = findViewById(R.id.expandableListViewIng);
         listCategory = new ArrayList<>();
@@ -30,7 +35,6 @@ public class IngredientsListActivity extends AppCompatActivity {
         adapter = new MainAdapter(this, listCategory, listIngCheck);
         expandableListViewIng.setAdapter(adapter);
         initListData();
-//        btnDone.findViewById(R.id.btnDone);
     }
 
     private void initListData() {
@@ -108,5 +112,12 @@ public class IngredientsListActivity extends AppCompatActivity {
         listIngCheck.put(listCategory.get(8), list9);
         listIngCheck.put(listCategory.get(9), list10);
         adapter.notifyDataSetChanged();
+    }
+
+    public void onClick (View view){
+        if(view==chtvDone) {
+            Intent i = new Intent(this, RecipeActivity.class);
+            startActivity(i);
+        }
     }
 }
