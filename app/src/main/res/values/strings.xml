@@ -8,133 +8,152 @@
     <string name="Category5">Fish and Seafood</string>
     <string name="Category6">Baking and Grains</string>
     <string name="Category7">Dairy Alternatives</string>
-    <string name="Category8">Spices</string>
-    <string name="Category9">category9</string>
+    <string name="Category8">Spices and Condiments</string>
+    <string name="Category9">Desserts and Snacks</string>
     <string name="Category10">category10</string>
     <string-array name="Category1">
         <item name="item1">Avocado</item>
         <item name="item2">Broccoli</item>
         <item name="item3">Carrot</item>
-        <item name="item4">Cucumber</item>
-        <item name="item9">Eggplant</item>
-        <item name="item5">Fennel</item>
-        <item name="item6">Lettuce</item>
-        <item name="item10">Onion</item>
-        <item name="item8">Pepper</item>
-        <item name="item11">Potato</item>
-        <item name="item7">Tomato</item>
-        <item name="item12">Mushroom</item>
-        <item name="item12">Garlic</item>
-        <item name="item12">Sweet Potato</item>
-        <item name="item12">Corn</item>
+        <item name="item4">Corn</item>
+        <item name="item5">Cucumber</item>
+        <item name="item6">Eggplant</item>
+        <item name="item7">Fennel</item>
+        <item name="item8">Garlic</item>
+        <item name="item9">Lettuce</item>
+        <item name="item10">Mushroom</item>
+        <item name="item11">Onion</item>
         <item name="item12">Parsley</item>
+        <item name="item13">Pepper</item>
+        <item name="item14">Potato</item>
+        <item name="item15">Sweet Potato</item>
+        <item name="item16">Tomato</item>
+
     </string-array>
     <string-array name="Category2">
-        <item>item1lemon</item>
-        <item>item2</item>
-        <item>item3</item>
-        <item>item4</item>
-        <item>item5</item>
-        <item>item6</item>
-        <item>item7</item>
-        <item>item8</item>
-        <item>item9</item>
-        <item>item10</item>
+        <item name="item1">Apple</item>
+        <item name="item2">Kiwi</item>
+        <item name="item3">Apple</item>
+        <item name="item4">lemon</item>
+        <item name="item1">Apple</item>
+        <item name="item1">lemon</item>
+        <item name="item1">Apple</item>
+        <item name="item1">Lemon</item>
+        <item name="item1"></item>
+        <item name="item1">Melon</item>
+        <item name="item1">Peach</item>
+        <item name="item1">Watermelon</item>
     </string-array>
     <string-array name="Category3">
-        <item>item1</item>
-        <item>item2</item>
-        <item>item3</item>
-        <item>item4</item>
-        <item>item5</item>
-        <item>item6</item>
-        <item>item7</item>
-        <item>item8</item>
-        <item>item9</item>
-        <item>item10</item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
     </string-array>
     <string-array name="Category4">
-        <item>item1</item>
-        <item>item2</item>
-        <item>item3</item>
-        <item>item4</item>
-        <item>item5</item>
-        <item>item6</item>
-        <item>item7</item>
-        <item>item8</item>
-        <item>item9</item>
-        <item>item10</item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
     </string-array>
     <string-array name="Category5">
-        <item>item1</item>
-        <item>item2</item>
-        <item>item3</item>
-        <item>item4</item>
-        <item>item5</item>
-        <item>item6</item>
-        <item>item7</item>
-        <item>item8</item>
-        <item>item9</item>
-        <item>item10</item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
     </string-array>
     <string-array name="Category6">
-        <item>item1</item>
-        <item>item2</item>
-        <item>item3</item>
-        <item>item4</item>
-        <item>item5</item>
-        <item>item6</item>
-        <item>item7</item>
-        <item>item8</item>
-        <item>item9</item>
-        <item>item10</item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
     </string-array>
     <string-array name="Category7">
-        <item>item1</item>
-        <item>item2</item>
-        <item>item3</item>
-        <item>item4</item>
-        <item>item5</item>
-        <item>item6</item>
-        <item>item7</item>
-        <item>item8</item>
-        <item>item9</item>
-        <item>item10</item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
     </string-array>
     <string-array name="Category8">
-        <item>item1</item>
-        <item>item2</item>
-        <item>item3</item>
-        <item>item4</item>
-        <item>item5</item>
-        <item>item6</item>
-        <item>item7</item>
-        <item>item8</item>
-        <item>item9</item>
-        <item>item10</item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
     </string-array>
     <string-array name="Category9">
-        <item>item1</item>
-        <item>item2</item>
-        <item>item3</item>
-        <item>item4</item>
-        <item>item5</item>
-        <item>item6</item>
-        <item>item7</item>
-        <item>item8</item>
-        <item>item9</item>
-        <item>item10</item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
     </string-array>
     <string-array name="Category10">
-        <item>item1</item>
-        <item>item2</item>
-        <item>item3</item>
-        <item>item4</item>
-        <item>item5</item>
-        <item>item6</item>
-        <item>item7</item>
-        <item>item8</item>
-        <item>item9</item>
-        <item>item10</item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
+        <item name="item1"></item>
     </string-array>
 </resources>

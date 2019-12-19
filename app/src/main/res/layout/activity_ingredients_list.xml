@@ -8,17 +8,22 @@
     tools:context=".IngredientsListActivity">
 
     <TextView
-        android:id="@+id/sara"
+        android:id="@+id/tv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Check next to the ingredients you have: " />
+        android:layout_height="45dp"
+        android:text="Check next to the ingredients you have: "
+        android:textSize="20sp" />
 
     <ExpandableListView
         android:id="@+id/expandableListViewIng"
-        android:layout_width="match_parent"
-        android:layout_height="658dp">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
     </ExpandableListView>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="20dp" />
 
     <CheckedTextView
         android:id="@+id/chtvDone"

@@ -44,7 +44,7 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
         AlertDialog.Builder builder = new AlertDialog.Builder(MealsActivity.this);
 //        if (MealName() != null) {
         builder.setMessage("Since It Is " + HourMinute() + ", Would You Like to See The"
-                + MealName() + " Ingredients?");
+                + MealName() + "'s Prepared Meals?");
         builder.setCancelable(false);
         builder.setNegativeButton("I Have Something Else in mind", null);
 
