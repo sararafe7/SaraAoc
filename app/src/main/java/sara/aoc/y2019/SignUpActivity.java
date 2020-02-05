@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
-    EditText editTextEmail, editTextPassword;
+    EditText editTextEmail, editTextPassword, editTextConfirmPassword;
     Button buttonSignUp;
 
 
@@ -31,6 +31,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
         editTextEmail = findViewById(R.id.etEmail);
         editTextPassword = findViewById(R.id.etPassword);
+        editTextConfirmPassword = findViewById((R.id.etConPassword));
 
         buttonSignUp = findViewById(R.id.buttonSignUp);
         buttonSignUp.setOnClickListener(this);
@@ -54,32 +55,36 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     public void signUp (String email, String password){
-        Toast.makeText(SignUpActivity.this, email+":"+password, Toast.LENGTH_LONG).show();
 
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d("FirebaseAuth", "createUserWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(SignUpActivity.this, user.getEmail(), Toast.LENGTH_LONG).show();
+                        if (editTextPassword.equals(editTextConfirmPassword)) {
+                            if (task.isSuccessful()) {
+                                // Sign in success, update UI with the signed-in user's information
+                                Log.d("FirebaseAuth", "createUserWithEmail:success");
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                Toast.makeText(SignUpActivity.this, user.getEmail(), Toast.LENGTH_LONG).show();
+                             //   Toast.makeText(SignUpActivity.this, email+":"+password, Toast.LENGTH_LONG).show();
 
-                            //updateUI(user);
+
+                                //updateUI(user);
                                 Intent i = new Intent(SignUpActivity.this, MealsActivity.class);
                                 startActivity(i);
+                            } else {
+                                // If sign in fails, display a message to the user.
+                                Toast.makeText(SignUpActivity.this, "FAILED", Toast.LENGTH_LONG).show();
 
-
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Toast.makeText(SignUpActivity.this, "FAILED", Toast.LENGTH_LONG).show();
-
-                            Log.w("FirebaseAuth", "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(SignUpActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                            //updateUI(null);
+                                Log.w("FirebaseAuth", "createUserWithEmail:failure", task.getException());
+                                Toast.makeText(SignUpActivity.this, "Authentication failed.",
+                                        Toast.LENGTH_SHORT).show();
+                                //updateUI(null);
+                            }
                         }
+                        else
+                            Toast.makeText(SignUpActivity.this, "Different Passwords.",
+                                    Toast.LENGTH_SHORT).show();
 
                         // ...
                     }

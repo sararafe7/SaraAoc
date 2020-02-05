@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.util.Calendar;
@@ -18,7 +19,7 @@ import sara.aoc.y2019.R;
 public class MealsActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button btnBreakfast, btnLunch, btnDinner, btnVegan, btnSweets, btnSnacks, btnIngCheck, btnDone;
-
+    ImageButton imBtnBreakfast;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +41,8 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
         btnIngCheck.setOnClickListener(this);
 //        btnDone = findViewById(R.id.btnDone);
 //        btnDone.setOnClickListener(this);
+        imBtnBreakfast = findViewById(R.id.imBtnBreakfast);
+        imBtnBreakfast.setOnClickListener(this);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(MealsActivity.this);
 //        if (MealName() != null) {
@@ -103,11 +106,12 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
         if (hour > 9) {
             if (minute < 10) {
                 return hour + ":" + "0" + minute;
-            }
-        }
-        else{
-            if(minute<10){
-                return"0"+ hour + ":" + "0" + minute;
+            } else {
+                if (minute < 10) {
+                    return hour + ":" + "0" + minute;
+                }
+                else
+                    return hour + ":" + minute;
             }
         }
         return "0" + hour + ":" + minute;
@@ -159,8 +163,9 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
             Intent i = new Intent(this, IngredientsListActivity.class);
             startActivity(i);
         }
+        if(view == imBtnBreakfast){
+            Intent i = new Intent(this, BreakfastActivity.class);
+            startActivity(i);
+        }
     }
 }
-
-
-

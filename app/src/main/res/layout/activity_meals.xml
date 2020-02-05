@@ -26,11 +26,20 @@
             android:gravity="center"
             android:text="Breakfast" />
 
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:tint="#000000"
+            app:srcCompat="@drawable/breakfast" />
+
         <Button
             android:id="@+id/btnLunch"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:text="Lunch" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -49,6 +58,7 @@
             android:id="@+id/btnVegan"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:backgroundTint="#00000000"
             android:text="Vegan" />
 
     </LinearLayout>
