@@ -11,6 +11,7 @@
         android:id="@+id/tvSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/chewy"
         android:text="Choose The Meal You Would Like to cook:" />
 
     <LinearLayout
@@ -25,14 +26,6 @@
             android:layout_height="150dp"
             android:gravity="center"
             android:text="Breakfast" />
-
-        <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:tint="#000000"
-            app:srcCompat="@drawable/breakfast" />
 
         <Button
             android:id="@+id/btnLunch"

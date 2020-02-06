@@ -19,7 +19,6 @@ import sara.aoc.y2019.R;
 public class MealsActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button btnBreakfast, btnLunch, btnDinner, btnVegan, btnSweets, btnSnacks, btnIngCheck, btnDone;
-    ImageButton imBtnBreakfast;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +40,6 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
         btnIngCheck.setOnClickListener(this);
 //        btnDone = findViewById(R.id.btnDone);
 //        btnDone.setOnClickListener(this);
-        imBtnBreakfast = findViewById(R.id.imBtnBreakfast);
-        imBtnBreakfast.setOnClickListener(this);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(MealsActivity.this);
 //        if (MealName() != null) {
@@ -135,37 +132,34 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
-        if(view == btnBreakfast){
+        if (view == btnBreakfast) {
             Intent i = new Intent(this, BreakfastActivity.class);
             startActivity(i);
         }
-        if(view == btnLunch){
+        if (view == btnLunch) {
             Intent i = new Intent(this, LunchActivity.class);
             startActivity(i);
         }
-        if(view == btnDinner){
+        if (view == btnDinner) {
             Intent i = new Intent(this, DinnerActivity.class);
             startActivity(i);
         }
-        if(view == btnVegan){
+        if (view == btnVegan) {
             Intent i = new Intent(this, VeganActivity.class);
             startActivity(i);
         }
-        if(view == btnSweets){
+        if (view == btnSweets) {
             Intent i = new Intent(this, SweetsActivity.class);
             startActivity(i);
         }
-        if(view == btnSnacks){
+        if (view == btnSnacks) {
             Intent i = new Intent(this, SnacksActivity.class);
             startActivity(i);
         }
-        if(view == btnIngCheck){
+        if (view == btnIngCheck) {
             Intent i = new Intent(this, IngredientsListActivity.class);
             startActivity(i);
         }
-        if(view == imBtnBreakfast){
-            Intent i = new Intent(this, BreakfastActivity.class);
-            startActivity(i);
-        }
     }
+
 }
