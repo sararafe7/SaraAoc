@@ -44,7 +44,12 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View View){
         if(View == buttonSignUp)
-            signUp(editTextEmail.getText().toString(), editTextPassword.getText().toString());
+            if (editTextPassword.getText().toString().equals(editTextConfirmPassword.getText().toString())) {
+                signUp(editTextEmail.getText().toString(), editTextPassword.getText().toString());
+            }
+            else
+                Toast.makeText(SignUpActivity.this, "Different Passwords.",
+                        Toast.LENGTH_SHORT).show();
     }
     @Override
     public void onStart() {
@@ -60,7 +65,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (editTextPassword.equals(editTextConfirmPassword)) {
+
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
                                 Log.d("FirebaseAuth", "createUserWithEmail:success");
@@ -81,10 +86,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                         Toast.LENGTH_SHORT).show();
                                 //updateUI(null);
                             }
-                        }
-                        else
-                            Toast.makeText(SignUpActivity.this, "Different Passwords.",
-                                    Toast.LENGTH_SHORT).show();
+
 
                         // ...
                     }

@@ -119,12 +119,12 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
 
         if (cal.get(Calendar.AM_PM) == 0) {
             if (hour > 4 && hour < 12)
-                return " Breakfast";
+                return "Breakfast";
         } else {
             if (hour == 0 || (hour>=1 && hour <6))
-                return " Lunch";
+                return "Lunch";
             if (hour > 5 && hour < 12)
-                return " Dinner";
+                return "Dinner";
 
         }
         return null;
