@@ -133,8 +133,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="82dp"
-        android:layout_marginBottom="202dp"
+        android:layout_marginRight="47dp"
+        android:layout_marginBottom="242dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name" />
@@ -160,5 +160,25 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="56dp"
+        android:layout_marginBottom="686dp"
+        android:text="Fill every empty bracket in order to add a new recipe" />
+
+    <Button
+        android:id="@+id/doneBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="142dp"
+        android:layout_marginBottom="14dp"
+        android:text="Add " />
 
 </RelativeLayout>
