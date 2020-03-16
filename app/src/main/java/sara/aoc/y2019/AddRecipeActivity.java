@@ -40,7 +40,7 @@ public class AddRecipeActivity extends AppCompatActivity implements View.OnClick
     }
     public void showMultiSelection() {
         final String[] items = getResources().getStringArray(R.array.Category1);
-        
+
         final ArrayList<Integer> selectedList = new ArrayList<>();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
