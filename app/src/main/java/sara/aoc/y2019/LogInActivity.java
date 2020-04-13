@@ -39,7 +39,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
 
         //initialize properties
         editTextEmail = findViewById(R.id.etEmail);
-        editTextPassword = findViewById(R.id.editTextPassword);
+        editTextPassword = findViewById(R.id.etPassword);
 
         buttonLogIn = findViewById(R.id.buttonLogIn);
         buttonLogIn.setOnClickListener(this);

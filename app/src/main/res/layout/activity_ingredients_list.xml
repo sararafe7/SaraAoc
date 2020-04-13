@@ -30,10 +30,9 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:background="@android:color/darker_gray"
-        android:checkMark="@android:drawable/checkbox_on_background"
+        android:checkMark="@drawable/icon_checked"
         android:gravity="center"
         android:text="Done"
         android:textAlignment="gravity" />
-
 
 </LinearLayout>

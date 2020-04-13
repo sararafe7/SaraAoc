@@ -9,14 +9,14 @@
 
     <TextView
         android:id="@+id/tvSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="319dp"
+        android:layout_height="40dp"
         android:fontFamily="@font/chewy"
         android:text="Choose The Meal You Would Like to cook:" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="210dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -26,6 +26,10 @@
             android:layout_height="150dp"
             android:gravity="center"
             android:text="Breakfast" />
+
+        <Space
+            android:layout_width="40dp"
+            android:layout_height="150dp" />
 
         <Button
             android:id="@+id/btnLunch"
@@ -38,7 +42,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="210dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -48,32 +52,15 @@
             android:layout_height="150dp"
             android:text="Dinner" />
 
-        <Button
-            android:id="@+id/btnVegan"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:backgroundTint="#00000000"
-            android:text="Vegan" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
+        <Space
+            android:layout_width="40dp"
+            android:layout_height="150dp" />
 
         <Button
             android:id="@+id/btnSweets"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:text="Sweets" />
-
-        <Button
-            android:id="@+id/btnSnacks"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:text="Snacks" />
 
     </LinearLayout>
 

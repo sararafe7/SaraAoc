@@ -18,7 +18,7 @@ import sara.aoc.y2019.R;
 
 public class MealsActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button btnBreakfast, btnLunch, btnDinner, btnVegan, btnSweets, btnSnacks, btnIngCheck, btnDone;
+    Button btnBreakfast, btnLunch, btnDinner, btnSweets, btnIngCheck, btnDone;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,12 +30,8 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
         btnLunch.setOnClickListener(this);
         btnDinner = findViewById(R.id.btnDinner);
         btnDinner.setOnClickListener(this);
-        btnVegan = findViewById(R.id.btnVegan);
-        btnVegan.setOnClickListener(this);
         btnSweets = findViewById(R.id.btnSweets);
         btnSweets.setOnClickListener(this);
-        btnSnacks = findViewById(R.id.btnSnacks);
-        btnSnacks.setOnClickListener(this);
         btnIngCheck = findViewById(R.id.btnIngCheck);
         btnIngCheck.setOnClickListener(this);
 //        btnDone = findViewById(R.id.btnDone);
@@ -63,16 +59,8 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
                     Intent intent = new Intent(MealsActivity.this, DinnerActivity.class);
                     startActivity(intent);
                 }
-                if (MealName().equals("Vegan")) {
-                    Intent intent = new Intent(MealsActivity.this, VeganActivity.class);
-                    startActivity(intent);
-                }
                 if (MealName().equals("Sweets")) {
                     Intent intent = new Intent(MealsActivity.this, SweetsActivity.class);
-                    startActivity(intent);
-                }
-                if (MealName().equals("Snacks")){
-                    Intent intent = new Intent(MealsActivity.this, SnacksActivity.class);
                     startActivity(intent);
                 }
             }
@@ -144,16 +132,8 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
             Intent i = new Intent(this, DinnerActivity.class);
             startActivity(i);
         }
-        if (view == btnVegan) {
-            Intent i = new Intent(this, VeganActivity.class);
-            startActivity(i);
-        }
         if (view == btnSweets) {
             Intent i = new Intent(this, SweetsActivity.class);
-            startActivity(i);
-        }
-        if (view == btnSnacks) {
-            Intent i = new Intent(this, SnacksActivity.class);
             startActivity(i);
         }
         if (view == btnIngCheck) {
