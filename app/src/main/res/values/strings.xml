@@ -1,16 +1,14 @@
 <resources>
     <string name="app_name">SaraAoc2019</string>
-    <string name="settings">Settings</string>
     <string name="Category1">Vegetables</string>
     <string name="Category2">Fruits</string>
     <string name="Category3">Dairy</string>
     <string name="Category4">Meats</string>
     <string name="Category5">Fish and Seafood</string>
     <string name="Category6">Baking and Grains</string>
-    <string name="Category7">Dairy Alternatives</string>
-    <string name="Category8">Spices and Condiments</string>
-    <string name="Category9">Desserts and Snacks</string>
-    <string name="Category10">category10</string>
+    <string name="Category7">Spices and Condiments</string>
+    <string name="add_recipe">Add Recipe</string>
+    <string name="log_out">Log Out</string>
     <string-array name="Category1">
         <item name="item1">Avocado</item>
         <item name="item2">Broccoli</item>
@@ -34,126 +32,33 @@
         <item name="item1">Apple</item>
         <item name="item2">Kiwi</item>
         <item name="item3">Apple</item>
-        <item name="item4">lemon</item>
-        <item name="item1">Apple</item>
-        <item name="item1">lemon</item>
-        <item name="item1">Apple</item>
-        <item name="item1">Lemon</item>
-        <item name="item1"></item>
-        <item name="item1">Melon</item>
-        <item name="item1">Peach</item>
-        <item name="item1">Watermelon</item>
+
     </string-array>
     <string-array name="Category3">
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
+        <item name="item1">Cheese</item>
+        <item name="item2">Milk</item>
+        <item name="item3">Milk</item>
+
     </string-array>
     <string-array name="Category4">
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
+        <item name="item1">Chicken Breast</item>
+        <item name="item2">Beef</item>
+        <item name="item3">Turkey</item>
+
     </string-array>
     <string-array name="Category5">
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
+        <item name="item1">Salmon</item>
+        <item name="item2">Shrimps</item>
+        <item name="item3">Tuna</item>
     </string-array>
     <string-array name="Category6">
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
+        <item name="item1">Bread</item>
+        <item name="item2">Flour</item>
+        <item name="item3">Rice</item>
     </string-array>
     <string-array name="Category7">
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-    </string-array>
-    <string-array name="Category8">
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-    </string-array>
-    <string-array name="Category9">
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-    </string-array>
-    <string-array name="Category10">
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
-        <item name="item1"></item>
+        <item name="item1">Cinnamon</item>
+        <item name="item2">Cumin</item>
+        <item name="item3">Paprika</item>
     </string-array>
 </resources>

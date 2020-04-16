@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "900337064985",
+    "firebase_url": "https://saraaoc2019.firebaseio.com",
+    "project_id": "saraaoc2019",
+    "storage_bucket": "saraaoc2019.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900337064985:android:8ee1895c74e2b1eb045e88",
+        "android_client_info": {
+          "package_name": "sara.aoc.y2019"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900337064985-svcj4urjp4sjborbor8p9a796eh28e2i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sara.aoc.y2019",
+            "certificate_hash": "5fbb69f28d9993c1abcf86a85509f3e9ad4b169f"
+          }
+        },
+        {
+          "client_id": "900337064985-39rade3lbctbdk60l013cdbm3jmre5pe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWyTsoaDMJ7O0mZB6eFVGsCQs0D8Hw7uE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900337064985-39rade3lbctbdk60l013cdbm3jmre5pe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

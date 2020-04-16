@@ -27,14 +27,14 @@ public class CustomAdapter {
     //recipe = the written recipe
     private String recipe;
 
-    public CustomAdapter(String reName, int theAmOfDiners, Bitmap mPicture, ArrayList<String> ingredients, ArrayList<String> ingRecoToAdd, double tiForPre, double tiToMake, String recipe) {
+    public CustomAdapter(String reName, int theAmOfDiners, Bitmap mPicture, double tiForPre, double tiToMake, String recipe) {
         this.reName = reName;
         this.theAmOfDiners = theAmOfDiners;
         this.mPicture = mPicture;
-        this.ingredients = new ArrayList<>(20);
-        this.ingRecoToAdd = new ArrayList<>(10);
+        //this.ingredients = new ArrayList<>(20);
         this.tiForPre = tiForPre;
         this.tiToMake = tiToMake;
         this.recipe = recipe;
     }
 }
+//, ArrayList<String> ingredients

@@ -1,11 +1,14 @@
 package sara.aoc.y2019;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -71,6 +74,42 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
 
 }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        //return true;
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()){
+            case R.id.addrecipe:
+                Intent i = new Intent(this, AddRecipeActivity.class);
+                startActivity(i);
+                break;
+            case R.id.logout:
+                AlertDialog.Builder builder = new AlertDialog.Builder(MealsActivity.this);
+                builder.setMessage("Are You Sure You Want to Log Out?");
+                builder.setCancelable(false);
+                builder.setNegativeButton("No", null);
+
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent i1 = new Intent(MealsActivity.this, LogInActivity.class);
+                        startActivity(i1);
+                    }
+                });
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
+                break;
+        }
+        return true;
+        //return super.onOptionsItemSelected(item);
+    }
+
     public static String HourMinute() {
         Calendar cal = Calendar.getInstance();
         int hour = cal.get(Calendar.HOUR);
@@ -92,15 +131,12 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
             if (minute < 10) {
                 return hour + ":" + "0" + minute;
             } else {
-                if (minute < 10) {
-                    return hour + ":" + "0" + minute;
-                }
-                else
-                    return hour + ":" + minute;
+                return hour + ":" + minute;
             }
         }
         return "0" + hour + ":" + minute;
     }
+
     public static String MealName() {
         Calendar cal = Calendar.getInstance();
         int hour = cal.get(Calendar.HOUR);
@@ -137,9 +173,8 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
             startActivity(i);
         }
         if (view == btnIngCheck) {
-            Intent i = new Intent(this, IngredientsListActivity.class);
+            Intent i = new Intent(this, IngredientsExpandableListActivity.class);
             startActivity(i);
         }
     }
-
 }

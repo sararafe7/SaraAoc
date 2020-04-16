@@ -74,42 +74,6 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
                 });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        //return true;
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        //return super.onOptionsItemSelected(item);
-        Intent goToNextActivity;
-
-        switch(item.getItemId()){
-
-            case R.id.settings:
-
-                goToNextActivity = new Intent(getApplicationContext(),SettingsActivity.class);
-                startActivity(goToNextActivity);
-                break;
-
-            case R.id.addrecipe:
-                goToNextActivity = new Intent(getApplicationContext(),AddRecipeActivity.class);
-                startActivity(goToNextActivity);
-                break;
-
-            case R.id.logout:
-                goToNextActivity = new Intent(getApplicationContext(),LogInActivity.class);
-                startActivity(goToNextActivity);
-                break;
-
-        }
-        return true;
-    }
-
-    @Override
     public void onClick(View view) {
         if(view == buttonLogIn){
             if(editTextPassword.getText().toString().equals("") || editTextEmail.getText().toString().equals(""))

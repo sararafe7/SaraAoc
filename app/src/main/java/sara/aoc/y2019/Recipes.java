@@ -12,9 +12,7 @@ public class Recipes {
     //mPicture = meal picture
     private Bitmap mPicture;
     //ingredients = the necessary ingredients for the recipe
-    private ArrayList<String> ingredients;
-    //ingRecoToAdd = ingredients recommended to add but not necessary
-    private ArrayList<String> ingRecoToAdd;
+   private ArrayList<String> ingredients;
     //tiForPre = time for the meal to prepare
     private double tiForPre;
     //tiToMake = time to make the meal
@@ -29,7 +27,6 @@ public class Recipes {
         this.theAmOfDiners = theAmOfDiners;
         this.mPicture = mPicture;
         this.ingredients = new ArrayList<>(20);
-        this.ingRecoToAdd = new ArrayList<>(10);
         this.tiForPre = tiForPre;
         this.tiToMake = tiToMake;
         this.recipe = recipe;
@@ -60,13 +57,13 @@ public class Recipes {
         this.mPicture = mPicture;
     }
 
-    public ArrayList<String> getIngredients() {
-        return ingredients;
-    }
+//    public ArrayList<String> getIngredients() {
+      // return ingredients;
+   // }
 
-    public void setIngredients(ArrayList<String> ingredients) {
-        this.ingredients = ingredients;
-    }
+    //public void setIngredients(ArrayList<String> ingredients) {
+      //  this.ingredients = ingredients;
+    //}
 
     public double getTiForPre() {
         return tiForPre;
