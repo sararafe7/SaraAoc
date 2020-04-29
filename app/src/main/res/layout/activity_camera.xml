@@ -7,21 +7,46 @@
     android:layout_height="match_parent"
     tools:context=".CameraActivity">
 
+    <TextView
+        android:id="@+id/reNametv"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:text="Insert Your Profile Picture" />
+
     <Button
-        android:id="@+id/camera"
+        android:id="@+id/cameraBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Camera" />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="47dp" />
+
     <Button
-        android:id="@+id/x"
+        android:id="@+id/galleryBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="x" />
+        android:text="Gallery" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="47dp" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/avatars[0]" />
+        tools:srcCompat="@tools:sample/avatars[0]"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="44dp" />
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="done" />
+
 </LinearLayout>

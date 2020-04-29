@@ -1,9 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RecipeActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/reName"
+        android:layout_width="181dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="205dp"
+        android:layout_marginRight="269dp"
+        android:layout_marginBottom="587dp"
+        android:text="Recipe Name:" />
+
+    <TextView
+        android:id="@+id/theAmOfDiners"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="222dp"
+        android:layout_marginBottom="547dp"
+        android:text="The Amount of Diners:" />
+
+    <TextView
+        android:id="@+id/ingredients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="299dp"
+        android:layout_marginBottom="344dp"
+        android:text="Ingredients:" />
+
+    <TextView
+        android:id="@+id/tiForPre"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="316dp"
+        android:layout_marginBottom="489dp"
+        android:text="Time to Prepare:" />
+
+    <TextView
+        android:id="@+id/tiToCooktv"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="201dp"
+        android:layout_marginBottom="493dp"
+        android:text="Time to Cook:" />
+
+    <TextView
+        android:id="@+id/recipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="343dp"
+        android:layout_marginBottom="232dp"
+        android:text="Recipe: \n" />
+
+    <TextView
+        android:id="@+id/mPicture"
+        android:layout_width="187dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="215dp"
+        android:layout_marginBottom="197dp"
+        android:text="Picture of The Meal: " />
+
+    <TextView
+        android:id="@+id/textViewExper"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="160dp"
+        android:layout_marginRight="269dp"
+        android:layout_marginBottom="289dp"
+        android:text="TextView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="37dp"
+        android:layout_marginBottom="59dp"
+        tools:srcCompat="@tools:sample/avatars[0]" />
+
+    <Button
+        android:id="@+id/backToMealsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="142dp"
+        android:layout_marginBottom="14dp"
+        android:text="Back to Meals" />
+</RelativeLayout>

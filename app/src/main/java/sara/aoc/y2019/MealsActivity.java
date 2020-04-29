@@ -84,8 +84,8 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()){
-            case R.id.addrecipe:
-                Intent i = new Intent(this, AddRecipeActivity.class);
+            case R.id.profilepic:
+                Intent i = new Intent(this, CameraActivity.class);
                 startActivity(i);
                 break;
             case R.id.logout:

@@ -10,15 +10,20 @@
     <ExpandableListView
         android:id="@+id/lvCategory"
         android:layout_width="match_parent"
-        android:layout_height="640dp"
+        android:layout_height="457dp"
         android:childDivider="@color/colorBlack"
         android:divider="@null"
         android:dividerHeight="0dp" />
 
+    <TextView
+        android:id="@+id/reNametv"
+        android:layout_width="match_parent"
+        android:layout_height="92dp" />
+
     <CheckedTextView
         android:id="@+id/chtvDone"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="40dp"
         android:background="@android:color/darker_gray"
         android:checkMark="@drawable/icon_checked"
         android:gravity="center"

@@ -205,14 +205,12 @@ public class MyCategoriesExpandableListAdapter extends BaseExpandableListAdapter
     }
 
     private class ViewHolderParent {
-
         TextView tvMainCategoryName;
         CheckBox cbMainCategory;
         ImageView ivCategory;
     }
 
     private class ViewHolderChild {
-
         TextView tvSubCategoryName;
         CheckBox cbSubCategory;
         View viewDivider;

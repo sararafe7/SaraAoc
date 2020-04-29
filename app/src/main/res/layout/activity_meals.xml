@@ -24,6 +24,7 @@
             android:id="@+id/btnBreakfast"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:fontFamily="casual"
             android:gravity="center"
             android:text="Breakfast" />
 
@@ -35,7 +36,7 @@
             android:id="@+id/btnLunch"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:fontFamily="@font/chewy"
+            android:fontFamily="casual"
             android:text="Lunch" />
 
     </LinearLayout>
@@ -50,6 +51,7 @@
             android:id="@+id/btnDinner"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:fontFamily="casual"
             android:text="Dinner" />
 
         <Space
@@ -60,6 +62,7 @@
             android:id="@+id/btnSweets"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:fontFamily="casual"
             android:text="Sweets" />
 
     </LinearLayout>
@@ -72,6 +75,7 @@
         android:id="@+id/btnIngCheck"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/chewy"
         android:text="Would You Like to Prepare Your Own Meal?" />
 
 </LinearLayout>

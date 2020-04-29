@@ -10,27 +10,28 @@ public class Recipes {
     //theAmOfDiners = theAmountOfDiners
     private int theAmOfDiners;
     //mPicture = meal picture
-    private Bitmap mPicture;
+    ////private Bitmap mPicture;
+    private int mPicture;
     //ingredients = the necessary ingredients for the recipe
    private ArrayList<String> ingredients;
     //tiForPre = time for the meal to prepare
-    private double tiForPre;
+    private int tiForPre;
     //tiToMake = time to make the meal
-    private double tiToMake;
+    private int tiToCook;
     //recipe = the written recipe
     private String recipe;
 
 
 
-    public Recipes(String reName, int theAmOfDiners, Bitmap mPicture, ArrayList<String> ingredients, ArrayList<String> ingRecoToAdd, double tiForPre, double tiToMake, String recipe) {
+    public Recipes(String reName, int theAmOfDiners, int tiForPre, int tiToCook, String recipe) {
         this.reName = reName;
         this.theAmOfDiners = theAmOfDiners;
-        this.mPicture = mPicture;
-        this.ingredients = new ArrayList<>(20);
         this.tiForPre = tiForPre;
-        this.tiToMake = tiToMake;
+        this.tiToCook = tiToCook;
         this.recipe = recipe;
     }
+
+
 
 
     public String getReName() {
@@ -49,36 +50,45 @@ public class Recipes {
         this.theAmOfDiners = theAmOfDiners;
     }
 
-    public Bitmap getmPicture() {
+    //public Bitmap getmPicture() {
+       // return mPicture;
+    //}
+
+    //public void setmPicture(Bitmap mPicture) {
+      //  this.mPicture = mPicture;
+    //}
+
+
+    public int getmPicture() {
         return mPicture;
     }
 
-    public void setmPicture(Bitmap mPicture) {
+    public void setmPicture(int mPicture) {
         this.mPicture = mPicture;
     }
 
-//    public ArrayList<String> getIngredients() {
-      // return ingredients;
-   // }
+    public ArrayList<String> getIngredients() {
+       return ingredients;
+    }
 
-    //public void setIngredients(ArrayList<String> ingredients) {
-      //  this.ingredients = ingredients;
-    //}
+    public void setIngredients(ArrayList<String> ingredients) {
+        this.ingredients = ingredients;
+    }
 
     public double getTiForPre() {
         return tiForPre;
     }
 
-    public void setTiForPre(double tiForPre) {
+    public void setTiForPre(int tiForPre) {
         this.tiForPre = tiForPre;
     }
 
-    public double getTiToMake() {
-        return tiToMake;
+    public int getTiToCook() {
+        return tiToCook;
     }
 
-    public void setTiToMake(double tiToMake) {
-        this.tiToMake = tiToMake;
+    public void settiToCook(int tiToMake) {
+        this.tiToCook = tiToCook;
     }
 
     public String getRecipe() {
@@ -89,6 +99,16 @@ public class Recipes {
         this.recipe = recipe;
     }
 
-    public Recipes() {
+    @Override
+    public String toString() {
+        return "Recipes{" +
+                "reName='" + reName + '\'' +
+                ", theAmOfDiners=" + theAmOfDiners +
+                ", mPicture=" + mPicture +
+                ", ingredients=" + ingredients +
+                ", tiForPre=" + tiForPre +
+                ", tiToCook=" + tiToCook +
+                ", recipe='" + recipe + '\'' +
+                '}';
     }
 }

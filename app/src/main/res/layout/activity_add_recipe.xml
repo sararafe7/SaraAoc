@@ -8,6 +8,16 @@
 
 
     <TextView
+        android:id="@+id/reNametv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="44dp"
+        android:layout_marginBottom="673dp"
+        android:text="Fill the empty brackets in order to add a new recipe:" />
+
+    <TextView
         android:id="@+id/reName"
         android:layout_width="102dp"
         android:layout_height="wrap_content"
@@ -49,8 +59,20 @@
         android:ems="10"
         android:inputType="textPersonName" />
 
-   // <EditText
-     />   android:id="@+id/ingredientsEt"
+
+    <TextView
+        android:id="@+id/ingredients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="282dp"
+        android:layout_marginBottom="512dp"
+        android:text="Ingredients:" />
+
+
+    <EditText
+        android:id="@+id/ingredientsEt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -59,6 +81,7 @@
         android:layout_marginBottom="507dp"
         android:ems="10"
         android:inputType="textPersonName" />
+
 
     <TextView
         android:id="@+id/tiForPre"
@@ -87,8 +110,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="309dp"
-        android:layout_marginBottom="293dp"
+        android:layout_marginRight="316dp"
+        android:layout_marginBottom="388dp"
         android:text="Time to Cook:" />
 
     <EditText
@@ -97,8 +120,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="41dp"
-        android:layout_marginBottom="278dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="385dp"
         android:ems="10"
         android:inputType="textPersonName" />
 
@@ -108,8 +131,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="331dp"
-        android:layout_marginBottom="215dp"
+        android:layout_marginRight="342dp"
+        android:layout_marginBottom="335dp"
         android:text="Recipe:" />
 
     <EditText
@@ -118,23 +141,43 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="49dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="319dp"
         android:ems="10"
         android:inputType="textPersonName" />
 
-    <TextView
-        android:id="@+id/textView"
+    <Button
+        android:id="@+id/cameraBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="124dp"
+        android:layout_marginBottom="250dp"
+        android:text="Camera" />
+
+    <Button
+        android:id="@+id/galleryBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="250dp"
+        android:text="Gallery" />
+
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="56dp"
-        android:layout_marginBottom="686dp"
-        android:text="Fill the empty brackets in order to add a new recipe:" />
+        android:layout_marginRight="46dp"
+        android:layout_marginBottom="108dp"
+        tools:srcCompat="@tools:sample/avatars[0]" />
 
     <Button
-        android:id="@+id/doneBtn"
+        android:id="@+id/backToMealsBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -143,15 +186,14 @@
         android:layout_marginBottom="14dp"
         android:text="Add " />
 
-   // <TextView
-     />   android:id="@+id/ingredients"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/mPicture"
+        android:layout_width="187dp"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="282dp"
-        android:layout_marginBottom="512dp"
-        android:layout_toStartOf="@+id/ingredientsEt"
-        android:text="Ingredients:" />
-
+        android:layout_marginRight="224dp"
+        android:layout_marginBottom="267dp"
+        android:text="Picture of The Meal:
+        (Insert By Camera Or Gallery)" />
 </RelativeLayout>

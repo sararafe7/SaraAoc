@@ -11,19 +11,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CheckedActivity"></activity>
+        <activity android:name=".PreparedRecipeActivity"></activity>
+        <activity android:name=".CheckedActivity" />
         <activity android:name=".MealsActivity" />
         <activity android:name=".AllRecipesActivity" />
-        <activity android:name=".RecipeActivity" />
+        <activity android:name=".AddRecipeActivity" />
         <activity android:name=".SweetsActivity" />
         <activity android:name=".DinnerActivity" />
         <activity android:name=".LunchActivity" />
         <activity android:name=".BreakfastActivity" />
-        <activity android:name=".CameraActivity" />
         <activity android:name=".LogInActivity" />
+        <activity android:name=".IngredientsExpandableListActivity" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".AddRecipeActivity" />
-        <activity android:name=".IngredientsExpandableListActivity">
+        <activity android:name=".CameraActivity" />
+        <activity android:name=".RecipeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

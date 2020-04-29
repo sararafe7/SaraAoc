@@ -7,7 +7,7 @@
     <string name="Category5">Fish and Seafood</string>
     <string name="Category6">Baking and Grains</string>
     <string name="Category7">Spices and Condiments</string>
-    <string name="add_recipe">Add Recipe</string>
+    <string name="profile_pic">Profile Picture</string>
     <string name="log_out">Log Out</string>
     <string-array name="Category1">
         <item name="item1">Avocado</item>
@@ -30,13 +30,13 @@
     </string-array>
     <string-array name="Category2">
         <item name="item1">Apple</item>
-        <item name="item2">Kiwi</item>
-        <item name="item3">Apple</item>
+        <item name="item2">Peach</item>
+        <item name="item3">Mango</item>
 
     </string-array>
     <string-array name="Category3">
         <item name="item1">Cheese</item>
-        <item name="item2">Milk</item>
+        <item name="item2">Egg</item>
         <item name="item3">Milk</item>
 
     </string-array>
@@ -61,4 +61,5 @@
         <item name="item2">Cumin</item>
         <item name="item3">Paprika</item>
     </string-array>
+
 </resources>

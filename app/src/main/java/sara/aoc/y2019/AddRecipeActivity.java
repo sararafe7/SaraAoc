@@ -1,39 +1,49 @@
 package sara.aoc.y2019;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.MenuPopupWindow;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class AddRecipeActivity extends AppCompatActivity implements View.OnClickListener {
+public class AddRecipeActivity extends AppCompatActivity {
 
-    EditText reNameEt, theAmOfDinersEt, ingredientsEt, ingRecoToAddEt, tiForPreEt,
+    /*EditText reNameEt, theAmOfDinersEt, ingredientsEt, tiForPreEt,
             tiToMakeEt, recipeEt;
-    Bitmap bitmap;
     Button doneBtn;
     DatabaseReference reff;
     Recipes recipe;
 
+    private static final int CAMERA_REQUEST = 0;
+    private static final int GALLERY_REQUEST = 1;
+
+    Button cameraBtn, galleryBtn;
+    ImageView imageView;
+    Bitmap bitmap;
+*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_recipe);
 
-        reNameEt = findViewById(R.id.reNameEt);
+  /*      reNameEt = findViewById(R.id.reNameEt);
         theAmOfDinersEt = findViewById(R.id.theAmOfDinersEt);
         //ingredientsEt = findViewById(R.id.ingredientsEt);
         tiForPreEt = findViewById(R.id.tiForPreEt);
@@ -41,8 +51,16 @@ public class AddRecipeActivity extends AppCompatActivity implements View.OnClick
         recipeEt = findViewById(R.id.recipeEt);
         doneBtn = findViewById(R.id.doneBtn);
         doneBtn.setOnClickListener(this);
-        recipe = new Recipes();
+        /////////////recipe = new Recipes();
         reff = FirebaseDatabase.getInstance().getReference().child("Recipe");
+
+        cameraBtn = findViewById(R.id.cameraBtn);
+        cameraBtn.setOnClickListener(this);
+
+        galleryBtn = findViewById(R.id.galleryBtn);
+        galleryBtn.setOnClickListener(this);
+
+        imageView=findViewById(R.id.imageView);
     }
     public void showMultiSelection() {
         final String[] items = getResources().getStringArray(R.array.Category1);
@@ -79,8 +97,8 @@ public class AddRecipeActivity extends AppCompatActivity implements View.OnClick
         showMultiSelection();
         int theAmOfDiners = Integer.parseInt(theAmOfDinersEt.toString().trim());
        // ArrayList<String> ingredients = ArrayList.parse
-        double tiForPre = Double.parseDouble(tiForPreEt.toString().trim());
-        double tiToMake = Double.parseDouble(tiToMakeEt.toString().trim());
+        int tiForPre = Integer.parseInt(tiForPreEt.toString().trim());
+        int tiToMake = Integer.parseInt(tiToMakeEt.toString().trim());
         recipe.setReName(reNameEt.getText().toString().trim());
         recipe.setTheAmOfDiners(theAmOfDiners);
         //recipe.setIngredients(IngredientsEt);
@@ -94,5 +112,41 @@ public class AddRecipeActivity extends AppCompatActivity implements View.OnClick
             Intent i = new Intent(this, MealsActivity.class);
             startActivity(i);
         }
+
+        if (view == cameraBtn){
+            Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(i,CAMERA_REQUEST);
+        }
+
+        if (view == galleryBtn){
+            Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+            startActivityForResult(i,GALLERY_REQUEST);
+        }
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        //if the request was from camera and the result was OK meaning the camera worked
+        if (requestCode == CAMERA_REQUEST && resultCode == CameraActivity.RESULT_OK) {
+            //the image captured is saved in the data object
+            bitmap = (Bitmap) data.getExtras().get("data");
+            //set image captured to be the new image
+            imageView.setImageBitmap(bitmap);
+        }
+
+        else
+        if (requestCode == GALLERY_REQUEST && resultCode == CameraActivity.RESULT_OK) {
+            Uri targetUri = data.getData();
+            try {
+                bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(targetUri));
+                imageView.setImageBitmap(bitmap);
+            }
+            catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+        else {
+            Toast.makeText(this, "Could not select image or take photo", Toast.LENGTH_LONG).show();
+        }*/
     }
 }
+

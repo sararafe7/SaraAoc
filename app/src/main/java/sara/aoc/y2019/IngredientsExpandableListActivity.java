@@ -5,12 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.res.Resources;
 import android.os.Bundle;
 
-import android.content.Intent;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckedTextView;
 import android.widget.ExpandableListView;
+import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import sara.aoc.y2019.Model.DataItem;
@@ -18,7 +18,6 @@ import sara.aoc.y2019.Model.SubCategoryItem;
 
 public class IngredientsExpandableListActivity extends AppCompatActivity implements View.OnClickListener{
 
-//    private Button btn;
     private ExpandableListView lvCategory;
 
     private ArrayList<DataItem> arCategory;
@@ -28,8 +27,12 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
     private ArrayList<HashMap<String, String>> parentItems;
     private ArrayList<ArrayList<HashMap<String, String>>> childItems;
     private MyCategoriesExpandableListAdapter myCategoriesExpandableListAdapter;
-    private CheckedTextView chtvDone;
 
+    private CheckedTextView chtvDone;
+    private TextView textView;
+
+
+    ArrayList<String> selectedItems = new ArrayList<>();
 
 
     @Override
@@ -37,19 +40,11 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingredients_expandable_list);
 
-  //      btn = findViewById(R.id.btn);
+        chtvDone = findViewById(R.id.chtvDone);
+        chtvDone.setOnClickListener(this);
+        textView = findViewById(R.id.reNametv);
+        setupReferences();
 
-      //  btn.setOnClickListener(new View.OnClickListener() {
-           // @Override
-       //     public void onClick(View v) {
-         //       Intent intent = new Intent(IngredientsExpandableListActivity.this, CheckedActivity.class);
-           //     startActivity(intent);
-            //}
-    //    });
-
-            chtvDone = findViewById(R.id.chtvDone);
-            chtvDone.setOnClickListener(this);
-            setupReferences();
     }
 
     private void setupReferences() {
@@ -60,7 +55,7 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
         parentItems = new ArrayList<>();
         childItems = new ArrayList<>();
 
-        Resources res = getResources(); //assuming in an activity for example, otherwise you can provide a context.
+        Resources res = getResources();
 
         DataItem dataItem = new DataItem();
         dataItem.setCategoryId("1");
@@ -86,12 +81,12 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
 
         ingredients = res.getStringArray(R.array.Category2);
         arSubCategory = new ArrayList<>();
-        for(int j = 0; j < 3; j++) {
+        for(int i = 0; i < 3; i++) {
 
             SubCategoryItem subCategoryItem = new SubCategoryItem();
-            subCategoryItem.setCategoryId(String.valueOf(j));
+            subCategoryItem.setCategoryId(String.valueOf(i));
             subCategoryItem.setIsChecked(ConstantManager.CHECK_BOX_CHECKED_FALSE);
-            String ingredient = ingredients[j];
+            String ingredient = ingredients[i];
             subCategoryItem.setSubCategoryName(ingredient);
             arSubCategory.add(subCategoryItem);
         }
@@ -188,6 +183,7 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
         dataItem.setSubCategory(arSubCategory);
         arCategory.add(dataItem);
 
+
         Log.d("TAG", "setupReferences: "+arCategory.size());
 
         for(DataItem data : arCategory){
@@ -199,6 +195,7 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
             mapParent.put(ConstantManager.Parameter.CATEGORY_NAME,data.getCategoryName());
 
             int countIsChecked = 0;
+
             for(SubCategoryItem subCategoryItem : data.getSubCategory()) {
 
                 HashMap<String, String> mapChild = new HashMap<String, String>();
@@ -208,11 +205,11 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
                 mapChild.put(ConstantManager.Parameter.IS_CHECKED,subCategoryItem.getIsChecked());
 
                 if(subCategoryItem.getIsChecked().equalsIgnoreCase(ConstantManager.CHECK_BOX_CHECKED_TRUE)) {
-
                     countIsChecked++;
                 }
                 childArrayList.add(mapChild);
             }
+
 
             if(countIsChecked == data.getSubCategory().size()) {
 
@@ -230,15 +227,37 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
         ConstantManager.parentItems = parentItems;
         ConstantManager.childItems = childItems;
 
+
         myCategoriesExpandableListAdapter = new MyCategoriesExpandableListAdapter(this,parentItems,childItems,false);
         lvCategory.setAdapter(myCategoriesExpandableListAdapter);
     }
 
+
     @Override
     public void onClick(View view) {
         if(view==chtvDone) {
-            Intent i = new Intent(this, CheckedActivity.class);
-            startActivity(i);
+            for (int i = 0; i < MyCategoriesExpandableListAdapter.parentItems.size(); i++) {
+                String isChecked = MyCategoriesExpandableListAdapter.parentItems.get(i).get(ConstantManager.Parameter.IS_CHECKED);
+                if (isChecked.equalsIgnoreCase(ConstantManager.CHECK_BOX_CHECKED_TRUE)) {
+                    textView.setText(textView.getText() + MyCategoriesExpandableListAdapter
+                            .parentItems.get(i).get(ConstantManager.Parameter.CATEGORY_NAME));
+                }
+                for (int j = 0; j < MyCategoriesExpandableListAdapter.childItems.get(i).size(); j++) {
+                    String isChildChecked = MyCategoriesExpandableListAdapter.childItems.get(i).get(j).get(ConstantManager.Parameter.IS_CHECKED);
+
+                    if (isChildChecked.equalsIgnoreCase(ConstantManager.CHECK_BOX_CHECKED_TRUE)) {
+                        textView.setText(textView.getText() + " , " + MyCategoriesExpandableListAdapter
+                                .childItems.get(i).get(j).get(ConstantManager.Parameter.SUB_CATEGORY_NAME));
+                        selectedItems.add(MyCategoriesExpandableListAdapter
+                                .childItems.get(i).get(j).get(ConstantManager.Parameter.SUB_CATEGORY_NAME));
+
+                    }
+                }
+            }
+            textView.setText(selectedItems.toString());
         }
+
+
     }
 }
+

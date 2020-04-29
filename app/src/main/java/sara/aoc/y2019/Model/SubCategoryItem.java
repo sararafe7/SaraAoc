@@ -8,6 +8,7 @@ public class SubCategoryItem {
     private String subCategoryName;
     private String isChecked;
 
+
     public String getCategoryId() {
         return categoryId;
     }
