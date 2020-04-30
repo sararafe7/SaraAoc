@@ -13,9 +13,9 @@
         android:layout_height="30dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="205dp"
+        android:layout_marginEnd="207dp"
         android:layout_marginRight="269dp"
-        android:layout_marginBottom="587dp"
+        android:layout_marginBottom="199dp"
         android:text="Recipe Name:" />
 
     <TextView
@@ -24,8 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="222dp"
-        android:layout_marginBottom="547dp"
+        android:layout_marginRight="227dp"
+        android:layout_marginBottom="524dp"
         android:text="The Amount of Diners:" />
 
     <TextView
@@ -34,8 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="299dp"
-        android:layout_marginBottom="344dp"
+        android:layout_marginRight="300dp"
+        android:layout_marginBottom="393dp"
         android:text="Ingredients:" />
 
     <TextView
@@ -44,8 +44,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="316dp"
-        android:layout_marginBottom="489dp"
+        android:layout_marginRight="300dp"
+        android:layout_marginBottom="468dp"
         android:text="Time to Prepare:" />
 
     <TextView
@@ -54,8 +54,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="201dp"
-        android:layout_marginBottom="493dp"
+        android:layout_marginRight="207dp"
+        android:layout_marginBottom="490dp"
         android:text="Time to Cook:" />
 
     <TextView
@@ -64,19 +64,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="343dp"
-        android:layout_marginBottom="232dp"
+        android:layout_marginRight="314dp"
+        android:layout_marginBottom="248dp"
         android:text="Recipe: \n" />
-
-    <TextView
-        android:id="@+id/mPicture"
-        android:layout_width="187dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="215dp"
-        android:layout_marginBottom="197dp"
-        android:text="Picture of The Meal: " />
 
     <TextView
         android:id="@+id/textViewExper"
@@ -84,28 +74,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="160dp"
+        android:layout_marginEnd="133dp"
         android:layout_marginRight="269dp"
-        android:layout_marginBottom="289dp"
-        android:text="TextView" />
+        android:layout_marginBottom="16dp" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="37dp"
-        android:layout_marginBottom="59dp"
-        tools:srcCompat="@tools:sample/avatars[0]" />
 
-    <Button
-        android:id="@+id/backToMealsBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="142dp"
-        android:layout_marginBottom="14dp"
-        android:text="Back to Meals" />
 </RelativeLayout>

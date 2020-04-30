@@ -1,7 +1,5 @@
 package sara.aoc.y2019;
 
-import android.graphics.Bitmap;
-
 import java.util.ArrayList;
 
 public class Recipes {
@@ -13,7 +11,9 @@ public class Recipes {
     ////private Bitmap mPicture;
     private int mPicture;
     //ingredients = the necessary ingredients for the recipe
-   private ArrayList<String> ingredients;
+    private ArrayList<String> ingredients;
+    //noOfIngredients
+    private int noOfIngredients;
     //tiForPre = time for the meal to prepare
     private int tiForPre;
     //tiToMake = time to make the meal
@@ -22,10 +22,23 @@ public class Recipes {
     private String recipe;
 
 
-
-    public Recipes(String reName, int theAmOfDiners, int tiForPre, int tiToCook, String recipe) {
+    public Recipes(String reName, int theAmOfDiners, ArrayList<String> ingredients, int noOfIngredients, int tiForPre, int tiToCook, String recipe) {
         this.reName = reName;
         this.theAmOfDiners = theAmOfDiners;
+        for (int i = 0; i < ingredients.size(); i++)
+        {
+            this.ingredients.set(i, ingredients.get(i));
+        }
+        this.noOfIngredients = noOfIngredients;
+        this.tiForPre = tiForPre;
+        this.tiToCook = tiToCook;
+        this.recipe = recipe;
+    }
+
+    public Recipes(String reName, int theAmOfDiners, int noOfIngredients, int tiForPre, int tiToCook, String recipe) {
+        this.reName = reName;
+        this.theAmOfDiners = theAmOfDiners;
+        this.noOfIngredients = noOfIngredients;
         this.tiForPre = tiForPre;
         this.tiToCook = tiToCook;
         this.recipe = recipe;
@@ -72,7 +85,24 @@ public class Recipes {
     }
 
     public void setIngredients(ArrayList<String> ingredients) {
-        this.ingredients = ingredients;
+        for (int i = 0; i < ingredients.size(); i++){
+            this.ingredients.set(i, ingredients.get(i));
+
+//            List<Integer> newList = new ArrayList<>(oldList);
+
+        }
+    }
+
+    //public void setOneExper(int i, String string){
+      //  this.ingredients.set(i, string);
+   // }
+
+    public int getNoOfIngredients() {
+        return noOfIngredients;
+    }
+
+    public void setNoOfIngredients(int noOfIngredients) {
+        this.noOfIngredients = noOfIngredients;
     }
 
     public double getTiForPre() {
@@ -87,7 +117,7 @@ public class Recipes {
         return tiToCook;
     }
 
-    public void settiToCook(int tiToMake) {
+    public void setTiToCook(int tiToCook) {
         this.tiToCook = tiToCook;
     }
 
@@ -97,6 +127,10 @@ public class Recipes {
 
     public void setRecipe(String recipe) {
         this.recipe = recipe;
+    }
+
+    public String getIndex(int i){
+        return this.ingredients.get(i);
     }
 
     @Override

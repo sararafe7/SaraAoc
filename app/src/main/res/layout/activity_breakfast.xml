@@ -10,28 +10,56 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose the meal you want:" />
+        android:text="Choose the meal you want:"
+        android:textSize="22sp"
+        android:fontFamily="@font/fanwood_text"/>
 
-    <Button
-        android:id="@+id/breakfastBtn2"
-        android:layout_width="183dp"
-        android:layout_height="124dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="270dp"
-        android:layout_weight="1"
-        android:text="Pancakes" />
 
     <Button
         android:id="@+id/breakfastBtn1"
         android:layout_width="165dp"
-        android:layout_height="133dp"
+        android:layout_height="125dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="203dp"
-        android:layout_marginBottom="460dp"
+        android:layout_marginRight="204dp"
+        android:layout_marginBottom="455dp"
         android:layout_weight="1"
-        android:text="Omelet" />
+        android:background="@drawable/omelet"
+        android:fontFamily="@font/fanwood_text"
+        android:foregroundGravity="top"
+        android:gravity="top"
+        android:text="Omelet"
+        android:textColor="#698FB1"
+        android:textColorHighlight="#00DAAFAF"
+        android:textColorHint="#008D1313"
+        android:textColorLink="#006D1616"
+        android:textDirection="firstStrongRtl"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/breakfastBtn2"
+        android:layout_width="165dp"
+        android:layout_height="125dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="249dp"
+        android:layout_weight="1"
+        android:background="@drawable/pancakes"
+        android:fontFamily="@font/fanwood_text"
+        android:gravity="top"
+        android:text="Pancakes"
+        android:textColor="#698FB1"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/backToMealsBtnBr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="142dp"
+        android:layout_marginBottom="14dp"
+        android:text="Back to Meals" />
 
 </RelativeLayout>

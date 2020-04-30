@@ -2,6 +2,7 @@ package sara.aoc.y2019;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 
@@ -63,7 +64,7 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
 
         String[] ingredients = res.getStringArray(R.array.Category1);
         arSubCategory = new ArrayList<>();
-        for(int i = 1; i < 6; i++) {
+        for(int i = 0; i < 20; i++) {
 
             SubCategoryItem subCategoryItem = new SubCategoryItem();
             subCategoryItem.setCategoryId(String.valueOf(i));
@@ -99,7 +100,7 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
 
         ingredients = res.getStringArray(R.array.Category3);
         arSubCategory = new ArrayList<>();
-        for(int i = 0; i < 3; i++) {
+        for(int i = 0; i < 8; i++) {
 
             SubCategoryItem subCategoryItem = new SubCategoryItem();
             subCategoryItem.setCategoryId(String.valueOf(i));
@@ -153,7 +154,7 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
 
         ingredients = res.getStringArray(R.array.Category6);
         arSubCategory = new ArrayList<>();
-        for(int i = 0; i < 3; i++) {
+        for(int i = 0; i < 8; i++) {
 
             SubCategoryItem subCategoryItem = new SubCategoryItem();
             subCategoryItem.setCategoryId(String.valueOf(i));
@@ -167,11 +168,29 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
 
         dataItem = new DataItem();
         dataItem.setCategoryId("7");
-        dataItem.setCategoryName("Spices and Condiments");
+        dataItem.setCategoryName("Spices, Sweeteners and Condiments");
 
         ingredients = res.getStringArray(R.array.Category7);
         arSubCategory = new ArrayList<>();
-        for(int i = 0; i < 3; i++) {
+        for(int i = 0; i < 11; i++) {
+
+            SubCategoryItem subCategoryItem = new SubCategoryItem();
+            subCategoryItem.setCategoryId(String.valueOf(i));
+            subCategoryItem.setIsChecked(ConstantManager.CHECK_BOX_CHECKED_FALSE);
+            String ingredient = ingredients[i];
+            subCategoryItem.setSubCategoryName(ingredient);
+            arSubCategory.add(subCategoryItem);
+        }
+        dataItem.setSubCategory(arSubCategory);
+        arCategory.add(dataItem);
+
+        dataItem = new DataItem();
+        dataItem.setCategoryId("8");
+        dataItem.setCategoryName("Oils");
+
+        ingredients = res.getStringArray(R.array.Category8);
+        arSubCategory = new ArrayList<>();
+        for(int i = 0; i < 1; i++) {
 
             SubCategoryItem subCategoryItem = new SubCategoryItem();
             subCategoryItem.setCategoryId(String.valueOf(i));
@@ -255,6 +274,8 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
                 }
             }
             textView.setText(selectedItems.toString());
+            Intent i = new Intent(this, RecipeActivity.class);
+            startActivity(i);
         }
 
 

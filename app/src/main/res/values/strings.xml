@@ -6,9 +6,12 @@
     <string name="Category4">Meats</string>
     <string name="Category5">Fish and Seafood</string>
     <string name="Category6">Baking and Grains</string>
-    <string name="Category7">Spices and Condiments</string>
+    <string name="Category7">Spices, Sweeteners and Condiments</string>
+    <string name="Category8">Oils</string>
+
     <string name="profile_pic">Profile Picture</string>
     <string name="log_out">Log Out</string>
+
     <string-array name="Category1">
         <item name="item1">Avocado</item>
         <item name="item2">Broccoli</item>
@@ -26,22 +29,31 @@
         <item name="item14">Potato</item>
         <item name="item15">Sweet Potato</item>
         <item name="item16">Tomato</item>
-
+        <item name="item17">Green Beans</item>
+        <item name="item18">Olive</item>
+        <item name="item19">Cherry Tomatoes</item>
+        <item name="item20">Red Onion</item>
     </string-array>
+
     <string-array name="Category2">
         <item name="item1">Apple</item>
         <item name="item2">Peach</item>
         <item name="item3">Mango</item>
-
     </string-array>
+
     <string-array name="Category3">
         <item name="item1">Cheese</item>
         <item name="item2">Egg</item>
         <item name="item3">Milk</item>
-
+        <item name="item4">Butter</item>
+        <item name="item5">Butter Flavored Oil Spray</item>
+        <item name="item6">Feta</item>
+        <item name="item7">Parmesan</item>
+        <item name="item8">Mozzarella</item>
     </string-array>
+
     <string-array name="Category4">
-        <item name="item1">Chicken Breast</item>
+        <item name="item1">Chicken Breasts</item>
         <item name="item2">Beef</item>
         <item name="item3">Turkey</item>
 
@@ -51,15 +63,34 @@
         <item name="item2">Shrimps</item>
         <item name="item3">Tuna</item>
     </string-array>
+
     <string-array name="Category6">
         <item name="item1">Bread</item>
         <item name="item2">Flour</item>
         <item name="item3">Rice</item>
+        <item name="item4">Baking Soda</item>
+        <item name="item5">Pasta</item>
+        <item name="item6">Vanilla Extract</item>
+        <item name="item7">Baking Powder</item>
+        <item name="item8">Cocoa Powder</item>
     </string-array>
+
     <string-array name="Category7">
         <item name="item1">Cinnamon</item>
         <item name="item2">Cumin</item>
         <item name="item3">Paprika</item>
+        <item name="item4">Salt</item>
+        <item name="item5">Pepper</item>
+        <item name="item6">White Sugar</item>
+        <item name="item7">Paprika</item>
+        <item name="item8">Basil Pesto</item>
+        <item name="item9">Brown Sugar</item>
+        <item name="item10">Granulated Sugar</item>
+        <item name="item11">Bittersweet Chocolate</item>
+    </string-array>
+
+    <string-array name="Category8">
+        <item name="item1">Olive Oil</item>
     </string-array>
 
 </resources>

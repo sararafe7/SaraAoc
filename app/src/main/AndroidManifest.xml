@@ -13,24 +13,28 @@
         android:theme="@style/AppTheme">
         <activity android:name=".PreparedRecipeActivity"></activity>
         <activity android:name=".CheckedActivity" />
-        <activity android:name=".MealsActivity" />
+        <activity android:name=".RecipeActivity" />
         <activity android:name=".AllRecipesActivity" />
         <activity android:name=".AddRecipeActivity" />
         <activity android:name=".SweetsActivity" />
         <activity android:name=".DinnerActivity" />
         <activity android:name=".LunchActivity" />
-        <activity android:name=".BreakfastActivity" />
-        <activity android:name=".LogInActivity" />
         <activity android:name=".IngredientsExpandableListActivity" />
+        <activity android:name=".LogInActivity" />
+        <activity android:name=".BreakfastActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".CameraActivity" />
-        <activity android:name=".RecipeActivity">
+        <activity android:name=".MealsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

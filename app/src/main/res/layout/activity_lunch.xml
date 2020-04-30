@@ -10,28 +10,50 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose the meal you want:" />
+        android:text="Choose the meal you want:"
+        android:textSize="22sp"
+        android:fontFamily="@font/fanwood_text"/>
 
     <Button
         android:id="@+id/lunchBtn1"
-        android:layout_width="135dp"
-        android:layout_height="121dp"
+        android:layout_width="165dp"
+        android:layout_height="125dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="250dp"
-        android:layout_marginBottom="430dp"
+        android:layout_marginRight="216dp"
+        android:layout_marginBottom="441dp"
         android:layout_weight="1"
-        android:text="Omelet" />
+        android:background="@drawable/salmon"
+        android:fontFamily="@font/fanwood_text"
+        android:gravity="top"
+        android:text="Roasted Salmon with Green Beans and Tomatoes"
+        android:textColor="#698FB1"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/lunchBtn2"
-        android:layout_width="114dp"
-        android:layout_height="121dp"
+        android:layout_width="165dp"
+        android:layout_height="125dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="60dp"
-        android:layout_marginBottom="270dp"
+        android:layout_marginRight="31dp"
+        android:layout_marginBottom="221dp"
         android:layout_weight="1"
-        android:text="Button" />
+        android:background="@drawable/greeksalad"
+        android:fontFamily="@font/fanwood_text"
+        android:gravity="top"
+        android:text="Greek Salad"
+        android:textColor="#698FB1"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/backToMealsBtnLu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="142dp"
+        android:layout_marginBottom="14dp"
+        android:text="Back to Meals" />
 
 </RelativeLayout>

@@ -11,7 +11,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class SweetsActivity extends AppCompatActivity implements View.OnClickListener{
-    Button sweetsBtn1, sweetsBtn2;
+    Button sweetsBtn1, sweetsBtn2, backToMealsBtnSw;
 
 
         @Override
@@ -25,17 +25,31 @@ public class SweetsActivity extends AppCompatActivity implements View.OnClickLis
             sweetsBtn2 = findViewById(R.id.sweetsBtn2);
             sweetsBtn2.setOnClickListener(this);
 
-    }
+            backToMealsBtnSw = findViewById(R.id.backToMealsBtnSw);
+            backToMealsBtnSw.setOnClickListener(this);
+
+        }
 
     @Override
     public void onClick(View view) {
+
         if (view == sweetsBtn1){
             Intent i = new Intent(this, PreparedRecipeActivity.class);
+            String recipeName = "Earthquake Cake";
+            i.putExtra("RECIPE_NAME", recipeName);
             startActivity(i);
         }
 
         if (view == sweetsBtn2){
             Intent i = new Intent(this, PreparedRecipeActivity.class);
+            String recipeName = "Brownies";
+            i.putExtra("RECIPE_NAME", recipeName);
+            startActivity(i);
+        }
+
+
+        if (view == backToMealsBtnSw) {
+            Intent i = new Intent(this, MealsActivity.class);
             startActivity(i);
         }
     }
