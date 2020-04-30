@@ -88,7 +88,7 @@ public class PreparedRecipeActivity extends AppCompatActivity implements View.On
             ingredients.add("Butter Flavored Oil Spray");
 
             for (int i = 0; i < 7; i++) {
-                ingredientstvPre.setText(ingredientstvPre.getText() + "" + (i + 1) +
+                ingredientstvPre.setText(ingredientstvPre.getText() + "" + '\n' + (i + 1) +
                         ". " + ingredients.get(i));
             }
             tiForPretvPre.setText(tiForPretvPre.getText()+ " 15 mins");
@@ -205,8 +205,8 @@ public class PreparedRecipeActivity extends AppCompatActivity implements View.On
         }
 
         //7th recipe:
-        if (recipeName.equals("Omelet")) {
-            reNametvPre.setText(reNametvPre.getText()+"");
+        if (recipeName.equals("Earthquake Cake")) {
+            reNametvPre.setText(reNametvPre.getText()+"Earthquake Cake");
             theAmOfDinerstvPre.setText(theAmOfDinerstvPre.getText()+"6");
 
             ingredients.add("1½ cups of Flour");
@@ -228,10 +228,10 @@ public class PreparedRecipeActivity extends AppCompatActivity implements View.On
             tiForPretvPre.setText(tiForPretvPre.getText()+ "30 mins");
             tiToCooktvPre.setText(tiToCooktvPre.getText()+ "30 mins");
             recipetvPre.setText(recipetvPre.getText() + "Place racks in upper and lower thirds of oven; preheat to 150°." + '\n' +
-                    "Whisk flour, salt, and baking soda in a small bowl; set aside.\u2028" + '\n' +
+                    "Whisk flour, salt, and baking soda in a small bowl; set aside." + '\n' +
                     "Cook ½ cup butter in a large saucepan over medium heat, swirling often and scraping bottom of pan with a heatproof rubber spatula, until butter foams, then browns, about 4 minutes." + '\n' +
                     "Transfer butter to a large heatproof bowl and let cool 1 minute." + '\n' +
-                    "Cut remaining ¼ cup (½ stick; 56 g) butter into small pieces and add to brown butter\u2028" + '\n' +
+                    "Cut remaining ¼ cup (½ stick; 56 g) butter into small pieces and add to brown butter" + '\n' +
                     "Once butter is melted, add both sugars and whisk, breaking up any clumps, until sugar is incorporated and no lumps remain." + '\n' +
                     "Add egg and egg yolks and whisk until sugar dissolves and mixture is smooth, about 30 seconds." + '\n' +
                     "Whisk in vanilla." + '\n' +

@@ -64,7 +64,7 @@
         android:id="@+id/ingredientsPre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ingredients: \n" />
+        android:text="Ingredients: " />
 
     <Space
         android:layout_width="match_parent"
