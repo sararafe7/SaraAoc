@@ -37,8 +37,6 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
         btnSweets.setOnClickListener(this);
         btnIngCheck = findViewById(R.id.btnIngCheck);
         btnIngCheck.setOnClickListener(this);
-//        btnDone = findViewById(R.id.btnDone);
-//        btnDone.setOnClickListener(this);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(MealsActivity.this);
 //        if (MealName() != null) {

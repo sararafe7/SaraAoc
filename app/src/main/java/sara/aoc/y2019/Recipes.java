@@ -21,6 +21,8 @@ public class Recipes {
     //recipe = the written recipe
     private String recipe;
 
+    private ArrayList<String> missingIngredients;
+
 
     public Recipes(String reName, int theAmOfDiners, ArrayList<String> ingredients, int noOfIngredients, int tiForPre, int tiToCook, String recipe) {
         this.reName = reName;
@@ -86,7 +88,7 @@ public class Recipes {
 
     public void setIngredients(ArrayList<String> ingredients) {
         for (int i = 0; i < ingredients.size(); i++){
-            this.ingredients.set(i, ingredients.get(i));
+            this.ingredients = ingredients;
 
 //            List<Integer> newList = new ArrayList<>(oldList);
 
@@ -131,6 +133,14 @@ public class Recipes {
 
     public String getIndex(int i){
         return this.ingredients.get(i);
+    }
+
+    public ArrayList<String> getMissingIngredients() {
+        return missingIngredients;
+    }
+
+    public void setMissingIngredients(ArrayList<String> missingIngredients) {
+        this.missingIngredients = missingIngredients;
     }
 
     @Override

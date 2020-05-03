@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExperimentActivity">
+
+
+    <TextView
+        android:id="@+id/reName"
+        android:layout_width="181dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="207dp"
+        android:layout_marginRight="269dp"
+        android:layout_marginBottom="199dp"
+        android:text="Recipe Name:" />
+
+    <TextView
+        android:id="@+id/theAmOfDiners"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="227dp"
+        android:layout_marginBottom="524dp"
+        android:text="The Amount of Diners:" />
+
+    <TextView
+        android:id="@+id/ingredients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="300dp"
+        android:layout_marginBottom="393dp"
+        android:text="Ingredients:" />
+
+    <TextView
+        android:id="@+id/tiForPre"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="300dp"
+        android:layout_marginBottom="468dp"
+        android:text="Time to Prepare:" />
+
+    <TextView
+        android:id="@+id/tiToCooktv"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="207dp"
+        android:layout_marginBottom="490dp"
+        android:text="Time to Cook:" />
+
+    <TextView
+        android:id="@+id/recipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="314dp"
+        android:layout_marginBottom="248dp"
+        android:text="Recipe: \n" />
+
+    <TextView
+        android:id="@+id/textViewExper"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="133dp"
+        android:layout_marginRight="269dp"
+        android:layout_marginBottom="16dp" />
+
+
+</RelativeLayout>

@@ -2,23 +2,35 @@ package sara.aoc.y2019;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class RecipeActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView reNametv, theAmOfDinerstv, ingredientstv, tiForPretv,
             tiToCooktv, recipetv;
     Button backToMealsBtn;
+
+    private ListView lv;
+
     DatabaseReference reff;
     Recipes recipe;
     ImageView imageView;
@@ -27,13 +39,6 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
     ArrayList<Recipes> myRecipes = new ArrayList<>();
     ArrayList<String> selectedItems = new ArrayList<>();
     ArrayList<String> ingredients = new ArrayList<>();
-    ArrayList<String> ingredients1 = new ArrayList<>();
-    ArrayList<String> ingredients2 = new ArrayList<>();
-    ArrayList<String> ingredients3 = new ArrayList<>();
-    ArrayList<String> ingredients4 = new ArrayList<>();
-    ArrayList<String> ingredients5 = new ArrayList<>();
-    ArrayList<String> ingredients6 = new ArrayList<>();
-    ArrayList<String> ingredients7 = new ArrayList<>();
 
     TextView textViewExper;
 
@@ -54,11 +59,13 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
 
         textViewExper = findViewById(R.id.textViewExper);
 
+        lv = (ListView) findViewById(R.id.experimentLv);
+
 
         // for now i removed R.drawable.omelet (Bitmappppp/int - from Recipes CLASS
 
         //1st recipe:
-        myRecipes.add(new Recipes("Omelet", 1, 4, 5, 5, "Break the 2 eggs into a small bowl"
+        myRecipes.add(new Recipes("Omelet", 1, 5, 5, 5, "Break the 2 eggs into a small bowl"
                 + '\n' + "Mix them, and then add the cheese, salt and pepper."
                 + '\n' + "Wait for the pan to heat and pour what's inside the bowl into it."
                 + '\n' + "Flip it when it starts getting cooked to the other side."
@@ -68,11 +75,11 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
         ingredients.add("Salt");
         ingredients.add("Pepper");
         ingredients.add("Cheese");
+        ingredients.add("Olive Oil");
 
-        //////////myRecipes.get(0).setIngredients(ingredients);
-        //myRecipes.get(0).setOneExper(0, "Eggs");
-        //////////    myRecipes.get(0).setIngredients(ingredients);
+        myRecipes.get(0).setIngredients((ArrayList<String>) ingredients.clone());
 
+        ingredients.clear();
 
         //2nd recipe:
         myRecipes.add(new Recipes("Pancakes", 8, 7, 15, 10, "In a bowl, mix eggs with milk, melted butter and sugar." + '\n' +
@@ -82,15 +89,17 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
                 "Grease the pan and pour the mixture into it." + '\n' +
                 "Cook on fire on both sides until the amount of steam decreases significantly."));
 
-        ingredients1.add("2 Eggs");
-        ingredients1.add("1/4 Cup of Sugar");
-        ingredients1.add("1 Cup of Milk");
-        ingredients1.add("50 gr Butter");
-        ingredients1.add("1 1/2 Cup of Flour");
-        ingredients1.add("2 tsp of Baking Powder");
-        ingredients1.add("Butter Flavored Oil Spray");
+        ingredients.add("2 Eggs");
+        ingredients.add("1/4 Cup of Sugar");
+        ingredients.add("1 Cup of Milk");
+        ingredients.add("50 gr Butter");
+        ingredients.add("1 1/2 Cup of Flour");
+        ingredients.add("2 tsp of Baking Powder");
+        ingredients.add("Butter Flavored Oil Spray");
 
-        //////   myRecipes.get(1).setIngredients(ingredients);
+        myRecipes.get(1).setIngredients((ArrayList<String>) ingredients.clone());
+
+        ingredients.clear();
 
 
         //3rd recipe:
@@ -101,27 +110,31 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
                 + "Season salmon with 1/4 teaspoon each salt and pepper and cook until golden brown and opaque throughout, 4 to 5 minutes per side." + '\n'
                 + "Serve with vegetables."));
 
-        ingredients2.add("6 Cloves Garlic, smashed");
-        ingredients2.add("1 1/4 Green Beans, trimmed");
-        ingredients2.add("2 tbsp. Olive Oil ");
-        ingredients2.add("Salt");
-        ingredients2.add("Pepper");
-        ingredients2.add("0.5 kilogram skinless Salmon fillet, cut into 4 pieces");
+        ingredients.add("6 Cloves Garlic, smashed");
+        ingredients.add("1 1/4 Green Beans, trimmed");
+        ingredients.add("2 tbsp. Olive Oil ");
+        ingredients.add("Salt");
+        ingredients.add("Pepper");
+        ingredients.add("0.5 kilogram skinless Salmon fillet, cut into 4 pieces");
 
-        ///////      myRecipes.get(2).setIngredients(ingredients);
+        myRecipes.get(2).setIngredients((ArrayList<String>) ingredients.clone());
+
+        ingredients.clear();
 
 
         //4th recipe:
         myRecipes.add(new Recipes("Greek Salad", 4, 5, 15, 0, "In a large bowl, stir together tomatoes, cucumber, olives, and red onion." + '\n'
                 + "Gently fold in feta."));
 
-        ingredients3.add("1 pt. Cherry Tomatoes, halved");
-        ingredients3.add("1 Cucumber, thinly sliced into half moons");
-        ingredients3.add("1 c. halved Kalamata Olives");
-        ingredients3.add("1/2 Red Onion, thinly sliced");
-        ingredients3.add("3/4 c. Crumbled Feta");
+        ingredients.add("1 pt. Cherry Tomatoes, halved");
+        ingredients.add("1 Cucumber, thinly sliced into half moons");
+        ingredients.add("1 c. halved Kalamata Olives");
+        ingredients.add("1/2 Red Onion, thinly sliced");
+        ingredients.add("3/4 c. Crumbled Feta");
 
-///////        myRecipes.get(3).setIngredients(ingredients);
+        myRecipes.get(3).setIngredients((ArrayList<String>) ingredients.clone());
+
+        ingredients.clear();
 
 
         //5th recipe:
@@ -134,14 +147,17 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
                 "Add the Parmesan, salt and pepper, then toss to coat again." + '\n' +
                 "Serve immediately."));
 
-        ingredients4.add("12 oz Pasta");
-        ingredients4.add("0.5 Frozen Broccoli");
-        ingredients4.add("3 Tbsp Butter");
-        ingredients4.add("3 Tbsp grated Parmesan");
-        ingredients4.add("Salt");
-        ingredients4.add("Pepper");
+        ingredients.add("12 oz Pasta");
+        ingredients.add("0.5 Frozen Broccoli");
+        ingredients.add("3 Tbsp Butter");
+        ingredients.add("3 Tbsp grated Parmesan");
+        ingredients.add("Salt");
+        ingredients.add("Pepper");
 
-//////        myRecipes.get(4).setIngredients(ingredients);
+        myRecipes.get(4).setIngredients((ArrayList<String>) ingredients.clone());
+
+        ingredients.clear();
+
 
         //6th recipe:
         myRecipes.add(new Recipes("Pesto Chicken", 1, 6, 5, 5, "Top the chicken breasts (raw or seared) with salt, pepper and a thick layer of basil pesto." + '\n' +
@@ -150,16 +166,20 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
                 "Bake the Pesto Chicken in the oven at 180 degrees until the chicken is cooked through." + '\n' +
                 "Serve immediately."));
 
-        ingredients5.add("2 slices of Chicken Breasts");
-        ingredients5.add("Basil Pesto");
-        ingredients5.add("6 slices of Mozzarella");
-        ingredients5.add("1 Tomato");
-        ingredients5.add("Salt");
-        ingredients5.add("Pepper");
+        ingredients.add("2 slices of Chicken Breasts");
+        ingredients.add("Basil Pesto");
+        ingredients.add("6 slices of Mozzarella");
+        ingredients.add("1 Tomato");
+        ingredients.add("Salt");
+        ingredients.add("Pepper");
+
+        myRecipes.get(5).setIngredients((ArrayList<String>) ingredients.clone());
+
+        ingredients.clear();
 
 
         //7th recipe:
-        myRecipes.add(new Recipes("Earthquake cake", 6, 10, 30, 30, "Place racks in upper and lower thirds of oven; preheat to 150°." + '\n' +
+        myRecipes.add(new Recipes("Earthquake Cake", 6, 10, 30, 30, "Place racks in upper and lower thirds of oven; preheat to 150°." + '\n' +
                 "Whisk flour, salt, and baking soda in a small bowl; set aside.\u2028" + '\n' +
                 "Cook ½ cup butter in a large saucepan over medium heat, swirling often and scraping bottom of pan with a heatproof rubber spatula, until butter foams, then browns, about 4 minutes." + '\n' +
                 "Transfer butter to a large heatproof bowl and let cool 1 minute." + '\n' +
@@ -172,18 +192,20 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
                 "Bake cookies, rotating sheets if cookies are browning very unevenly, until deep golden brown and firm around the edges, 8–10 minutes." + '\n' +
                 "Let cool on baking sheets."));
 
-        ingredients6.add("1½ cups of Flour");
-        ingredients6.add("1¼ tsp Salt");
-        ingredients6.add("¾ tsp Baking Soda");
-        ingredients6.add("¾ cup Butter, divided");
-        ingredients6.add("1 cup Brown Sugar");
-        ingredients6.add("¼ cup (50 g) Granulated Sugar");
-        ingredients6.add("1 Egg");
-        ingredients6.add("2 Egg yolks");
-        ingredients6.add("2 tsp. Vanilla Extract");
-        ingredients6.add("6 oz. Bittersweet Chocolate");
+        ingredients.add("1½ cups of Flour");
+        ingredients.add("1¼ tsp Salt");
+        ingredients.add("¾ tsp Baking Soda");
+        ingredients.add("¾ cup Butter, divided");
+        ingredients.add("1 cup Brown Sugar");
+        ingredients.add("¼ cup (50 g) Granulated Sugar");
+        ingredients.add("1 Egg");
+        ingredients.add("2 Egg yolks");
+        ingredients.add("2 tsp. Vanilla Extract");
+        ingredients.add("6 oz. Bittersweet Chocolate");
 
-/////        //myRecipes.get(6).setIngredients(ingredients);
+        myRecipes.get(6).setIngredients((ArrayList<String>) ingredients.clone());
+
+        ingredients.clear();
 
 
         //8th recipe:
@@ -197,23 +219,19 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
                 "Bake in preheated oven for 25 to 30 minutes." + '\n' +
                 "Do not overcook."));
 
-        ingredients7.add("½ cup Butter");
-        ingredients7.add("1 cup White Sugar");
-        ingredients7.add("2 Eggs");
-        ingredients7.add("1 teaspoon Vanilla Extract");
-        ingredients7.add("⅓ cup unsweetened Cocoa Powder");
-        ingredients7.add("½ cup all-purpose Flour");
-        ingredients7.add("¼ teaspoon Salt");
-        ingredients7.add("¼ teaspoon Baking Powder");
+        ingredients.add("½ cup Butter");
+        ingredients.add("1 cup White Sugar");
+        ingredients.add("2 Eggs");
+        ingredients.add("1 teaspoon Vanilla Extract");
+        ingredients.add("⅓ cup unsweetened Cocoa Powder");
+        ingredients.add("½ cup all-purpose Flour");
+        ingredients.add("¼ teaspoon Salt");
+        ingredients.add("¼ teaspoon Baking Powder");
 
-        //////myRecipes.get(7).setIngredients(ingredients);
+        myRecipes.get(7).setIngredients((ArrayList<String>) ingredients.clone());
 
-        // reNametv.setText();
-//        for (int i = 0; i < myRecipes.get(0).getIngredients().size(); i++) {
-  //          ingredientstv.setText(myRecipes.get(0).getIngredients().get(0));
-    //    }
+        ingredients.clear();
 
-        //ingredientstv.getText() + "" + '\n' + "" + (i + 1) + ". " + ingredients.get(i)
 
         for (int i = 0; i < MyCategoriesExpandableListAdapter.parentItems.size(); i++) {
 
@@ -221,8 +239,7 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
                 String isChildChecked = MyCategoriesExpandableListAdapter.childItems.get(i).get(j).get(ConstantManager.Parameter.IS_CHECKED);
 
                 if (isChildChecked.equalsIgnoreCase(ConstantManager.CHECK_BOX_CHECKED_TRUE)) {
-                    textViewExper.setText(textViewExper.getText() + " , " + MyCategoriesExpandableListAdapter
-                            .childItems.get(i).get(j).get(ConstantManager.Parameter.SUB_CATEGORY_NAME));
+
                     selectedItems.add(MyCategoriesExpandableListAdapter
                             .childItems.get(i).get(j).get(ConstantManager.Parameter.SUB_CATEGORY_NAME));
 
@@ -231,42 +248,103 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
         }
 
 
-        ArrayList<String> finalIngredients = new ArrayList<>();
+
+        ArrayList<String> recipeIngredients;
+        ArrayList<String> neededIngredients = new ArrayList<>(10);
+        final ArrayList<String> finalIngredients = new ArrayList<>(10);
+
+
+        final List<String> arrayListToLv = new ArrayList<String>();
+
+        // This is the array adapter, it takes the context of the activity as a
+        // first parameter, the type of list view as a second parameter and your
+        // array as a third parameter.
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+                this,
+                android.R.layout.simple_list_item_1,
+                arrayListToLv);
+
         int count = 0;
+        double divide = 0;
+        int num = 0;
 
-        //i for recipes
-        for (int i = 0; i < myRecipes.size(); i++) {
 
-            finalIngredients = myRecipes.get(i).getIngredients();
+            if (selectedItems.size()>= 4) {
+                //i for recipes
+                for (int i = 0; i < myRecipes.size(); i++) {
 
-            //j for selectedItems
-            for (int j = 0; j < selectedItems.size(); j++) {
+                    recipeIngredients = (ArrayList<String>) myRecipes.get(i).getIngredients().clone();
 
-                //k for ingredients
-                for (int k = 0; k < ingredients.size(); k++) {
-                    if (ingredients.get(k).contains(selectedItems.get(j)))
-                        count++;
+                    //j for selectedItems
+                    for (int j = 0; j < selectedItems.size(); j++) {
+
+                        //k for ingredients
+                        for (int k = 0; k < recipeIngredients.size(); k++) {
+                            if (recipeIngredients.get(k).contains(selectedItems.get(j))){
+                                count++;
+                                finalIngredients.add(selectedItems.get(j));
+                            }
+                        }
+
+                    }
+
+                    divide = (double) count/myRecipes.get(i).getNoOfIngredients();
+                    if (divide*100>=80) {
+                        arrayListToLv.add(myRecipes.get(i).getReName());
+                    }
+                    count = 0;
+                }
+                lv.setAdapter(arrayAdapter);
+            }
+
+
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Get the selected item text from ListView
+                String selectedItem = (String) parent.getItemAtPosition(position);
+                Intent intent;
+
+
+                for (int i = 0; i < myRecipes.size(); i++) {
+                    if (selectedItem.equals(myRecipes.get(i).getReName())) {
+                        intent = new Intent(RecipeActivity.this, PreparedRecipeActivity.class);
+                        String recipeName = myRecipes.get(i).getReName();
+                        intent.putExtra("RECIPE_NAME", recipeName);
+                        startActivity(intent);
+                    }
                 }
             }
-            if ((count / myRecipes.get(i).getNoOfIngredients()) >= 0.8) {
-                reNametv.setText(myRecipes.get(i).getReName());
+        });
 
-            }
+        if (arrayAdapter.isEmpty()) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(RecipeActivity.this);
+            builder.setMessage("You Can't Make Any Recipes With The Ingredients You Have");
+            builder.setPositiveButton("Go to the Ingredients List", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    Intent intent = new Intent(RecipeActivity.this, IngredientsExpandableListActivity.class);
+                    startActivity(intent);
+                    selectedItems.clear();
+                    arrayListToLv.clear();
+                }
+            });
 
+            builder.setNegativeButton("Go to Prepared Meals", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    Intent intent = new Intent(RecipeActivity.this, MealsActivity.class);
+                    startActivity(intent);
+                    selectedItems.clear();
+                    arrayListToLv.clear();
+                }
+            });
 
+            AlertDialog dialog = builder.create();
+            dialog.show();
         }
 
-        Intent intent = new Intent();
-        Bundle bundle = new Bundle();
-        bundle.putSerializable("RECIPES", myRecipes);
-        intent.putExtras(bundle);
-
-
-        ///for (int i = 0; i < recipes[0].getIngredients().length; i++){
-        //if (recipes[0].getIngredients()[i]!=null)
-        // textView.setText(textView.getText() +" " + (i+1) + ". "+ recipes[0].getIngredients()[i]+ '\n');
-        // textView2.setText(textView.getText() +" " + (i+1) + ". "+ recipes[0].getmPicture()[i]+ '\n');
-        //}
 
     }
         public void onClick (View view){
@@ -275,5 +353,6 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
                 startActivity(i);
             }
         }
-}
 
+
+}

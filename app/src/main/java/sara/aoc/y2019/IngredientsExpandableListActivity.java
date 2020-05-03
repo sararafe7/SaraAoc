@@ -11,13 +11,14 @@ import android.view.View;
 import android.widget.CheckedTextView;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import sara.aoc.y2019.Model.DataItem;
 import sara.aoc.y2019.Model.SubCategoryItem;
 
-public class IngredientsExpandableListActivity extends AppCompatActivity implements View.OnClickListener{
+public class IngredientsExpandableListActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ExpandableListView lvCategory;
 
@@ -64,7 +65,7 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
 
         String[] ingredients = res.getStringArray(R.array.Category1);
         arSubCategory = new ArrayList<>();
-        for(int i = 0; i < 20; i++) {
+        for (int i = 0; i < 20; i++) {
 
             SubCategoryItem subCategoryItem = new SubCategoryItem();
             subCategoryItem.setCategoryId(String.valueOf(i));
@@ -82,7 +83,7 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
 
         ingredients = res.getStringArray(R.array.Category2);
         arSubCategory = new ArrayList<>();
-        for(int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) {
 
             SubCategoryItem subCategoryItem = new SubCategoryItem();
             subCategoryItem.setCategoryId(String.valueOf(i));
@@ -100,7 +101,7 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
 
         ingredients = res.getStringArray(R.array.Category3);
         arSubCategory = new ArrayList<>();
-        for(int i = 0; i < 8; i++) {
+        for (int i = 0; i < 8; i++) {
 
             SubCategoryItem subCategoryItem = new SubCategoryItem();
             subCategoryItem.setCategoryId(String.valueOf(i));
@@ -118,7 +119,7 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
 
         ingredients = res.getStringArray(R.array.Category4);
         arSubCategory = new ArrayList<>();
-        for(int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) {
 
             SubCategoryItem subCategoryItem = new SubCategoryItem();
             subCategoryItem.setCategoryId(String.valueOf(i));
@@ -136,7 +137,7 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
 
         ingredients = res.getStringArray(R.array.Category5);
         arSubCategory = new ArrayList<>();
-        for(int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) {
 
             SubCategoryItem subCategoryItem = new SubCategoryItem();
             subCategoryItem.setCategoryId(String.valueOf(i));
@@ -154,7 +155,7 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
 
         ingredients = res.getStringArray(R.array.Category6);
         arSubCategory = new ArrayList<>();
-        for(int i = 0; i < 8; i++) {
+        for (int i = 0; i < 8; i++) {
 
             SubCategoryItem subCategoryItem = new SubCategoryItem();
             subCategoryItem.setCategoryId(String.valueOf(i));
@@ -172,7 +173,7 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
 
         ingredients = res.getStringArray(R.array.Category7);
         arSubCategory = new ArrayList<>();
-        for(int i = 0; i < 11; i++) {
+        for (int i = 0; i < 11; i++) {
 
             SubCategoryItem subCategoryItem = new SubCategoryItem();
             subCategoryItem.setCategoryId(String.valueOf(i));
@@ -190,7 +191,7 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
 
         ingredients = res.getStringArray(R.array.Category8);
         arSubCategory = new ArrayList<>();
-        for(int i = 0; i < 1; i++) {
+        for (int i = 0; i < 1; i++) {
 
             SubCategoryItem subCategoryItem = new SubCategoryItem();
             subCategoryItem.setCategoryId(String.valueOf(i));
@@ -203,41 +204,41 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
         arCategory.add(dataItem);
 
 
-        Log.d("TAG", "setupReferences: "+arCategory.size());
+        Log.d("TAG", "setupReferences: " + arCategory.size());
 
-        for(DataItem data : arCategory){
+        for (DataItem data : arCategory) {
 //                        Log.i("Item id",item.id);
-            ArrayList<HashMap<String, String>> childArrayList =new ArrayList<HashMap<String, String>>();
+            ArrayList<HashMap<String, String>> childArrayList = new ArrayList<HashMap<String, String>>();
             HashMap<String, String> mapParent = new HashMap<String, String>();
 
-            mapParent.put(ConstantManager.Parameter.CATEGORY_ID,data.getCategoryId());
-            mapParent.put(ConstantManager.Parameter.CATEGORY_NAME,data.getCategoryName());
+            mapParent.put(ConstantManager.Parameter.CATEGORY_ID, data.getCategoryId());
+            mapParent.put(ConstantManager.Parameter.CATEGORY_NAME, data.getCategoryName());
 
             int countIsChecked = 0;
 
-            for(SubCategoryItem subCategoryItem : data.getSubCategory()) {
+            for (SubCategoryItem subCategoryItem : data.getSubCategory()) {
 
                 HashMap<String, String> mapChild = new HashMap<String, String>();
-                mapChild.put(ConstantManager.Parameter.SUB_ID,subCategoryItem.getSubId());
-                mapChild.put(ConstantManager.Parameter.SUB_CATEGORY_NAME,subCategoryItem.getSubCategoryName());
-                mapChild.put(ConstantManager.Parameter.CATEGORY_ID,subCategoryItem.getCategoryId());
-                mapChild.put(ConstantManager.Parameter.IS_CHECKED,subCategoryItem.getIsChecked());
+                mapChild.put(ConstantManager.Parameter.SUB_ID, subCategoryItem.getSubId());
+                mapChild.put(ConstantManager.Parameter.SUB_CATEGORY_NAME, subCategoryItem.getSubCategoryName());
+                mapChild.put(ConstantManager.Parameter.CATEGORY_ID, subCategoryItem.getCategoryId());
+                mapChild.put(ConstantManager.Parameter.IS_CHECKED, subCategoryItem.getIsChecked());
 
-                if(subCategoryItem.getIsChecked().equalsIgnoreCase(ConstantManager.CHECK_BOX_CHECKED_TRUE)) {
+                if (subCategoryItem.getIsChecked().equalsIgnoreCase(ConstantManager.CHECK_BOX_CHECKED_TRUE)) {
                     countIsChecked++;
                 }
                 childArrayList.add(mapChild);
             }
 
 
-            if(countIsChecked == data.getSubCategory().size()) {
+            if (countIsChecked == data.getSubCategory().size()) {
 
                 data.setIsChecked(ConstantManager.CHECK_BOX_CHECKED_TRUE);
-            }else {
+            } else {
                 data.setIsChecked(ConstantManager.CHECK_BOX_CHECKED_FALSE);
             }
 
-            mapParent.put(ConstantManager.Parameter.IS_CHECKED,data.getIsChecked());
+            mapParent.put(ConstantManager.Parameter.IS_CHECKED, data.getIsChecked());
             childItems.add(childArrayList);
             parentItems.add(mapParent);
 
@@ -247,26 +248,19 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
         ConstantManager.childItems = childItems;
 
 
-        myCategoriesExpandableListAdapter = new MyCategoriesExpandableListAdapter(this,parentItems,childItems,false);
+        myCategoriesExpandableListAdapter = new MyCategoriesExpandableListAdapter(this, parentItems, childItems, false);
         lvCategory.setAdapter(myCategoriesExpandableListAdapter);
     }
 
 
     @Override
     public void onClick(View view) {
-        if(view==chtvDone) {
+        if (view == chtvDone) {
             for (int i = 0; i < MyCategoriesExpandableListAdapter.parentItems.size(); i++) {
-                String isChecked = MyCategoriesExpandableListAdapter.parentItems.get(i).get(ConstantManager.Parameter.IS_CHECKED);
-                if (isChecked.equalsIgnoreCase(ConstantManager.CHECK_BOX_CHECKED_TRUE)) {
-                    textView.setText(textView.getText() + MyCategoriesExpandableListAdapter
-                            .parentItems.get(i).get(ConstantManager.Parameter.CATEGORY_NAME));
-                }
                 for (int j = 0; j < MyCategoriesExpandableListAdapter.childItems.get(i).size(); j++) {
                     String isChildChecked = MyCategoriesExpandableListAdapter.childItems.get(i).get(j).get(ConstantManager.Parameter.IS_CHECKED);
 
                     if (isChildChecked.equalsIgnoreCase(ConstantManager.CHECK_BOX_CHECKED_TRUE)) {
-                        textView.setText(textView.getText() + " , " + MyCategoriesExpandableListAdapter
-                                .childItems.get(i).get(j).get(ConstantManager.Parameter.SUB_CATEGORY_NAME));
                         selectedItems.add(MyCategoriesExpandableListAdapter
                                 .childItems.get(i).get(j).get(ConstantManager.Parameter.SUB_CATEGORY_NAME));
 
@@ -274,11 +268,19 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
                 }
             }
             textView.setText(selectedItems.toString());
-            Intent i = new Intent(this, RecipeActivity.class);
-            startActivity(i);
+            if (selectedItems.isEmpty())
+                Toast.makeText(this, "You haven't chosen any ingredient", Toast.LENGTH_LONG).show();
+            else {
+                if ((selectedItems.size() < 4)) {
+                    Toast.makeText(this, "You Should Choose At Least 4 Ingredients", Toast.LENGTH_LONG).show();
+                } else {
+                    Intent intent = new Intent(this, RecipeActivity.class);
+                    startActivity(intent);
+                }
+            }
+
+
         }
-
-
     }
 }
 
