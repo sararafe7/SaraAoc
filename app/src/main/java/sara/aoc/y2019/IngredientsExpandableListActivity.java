@@ -267,7 +267,7 @@ public class IngredientsExpandableListActivity extends AppCompatActivity impleme
                     }
                 }
             }
-            textView.setText(selectedItems.toString());
+            //textView.setText(selectedItems.toString());
             if (selectedItems.isEmpty())
                 Toast.makeText(this, "You haven't chosen any ingredient", Toast.LENGTH_LONG).show();
             else {

@@ -188,7 +188,7 @@ public class PreparedRecipeActivity extends AppCompatActivity implements View.On
             ingredients.add("Basil Pesto");
             ingredients.add("6 slices of Mozzarella");
             ingredients.add("1 Tomato");
-//            ingredients.add("Salt");
+            ingredients.add("Salt");
             ingredients.add("Pepper");
 
             for (int i = 0; i < 6; i++) {

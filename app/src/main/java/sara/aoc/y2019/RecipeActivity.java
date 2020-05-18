@@ -269,34 +269,33 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
         int num = 0;
 
 
-            if (selectedItems.size()>= 4) {
-                //i for recipes
-                for (int i = 0; i < myRecipes.size(); i++) {
+        if (selectedItems.size()>= 4) {
+            //i for recipes
+            for (int i = 0; i < myRecipes.size(); i++) {
 
-                    recipeIngredients = (ArrayList<String>) myRecipes.get(i).getIngredients().clone();
+                recipeIngredients = (ArrayList<String>) myRecipes.get(i).getIngredients().clone();
 
-                    //j for selectedItems
-                    for (int j = 0; j < selectedItems.size(); j++) {
+                //j for selectedItems
+                for (int j = 0; j < selectedItems.size(); j++) {
 
-                        //k for ingredients
-                        for (int k = 0; k < recipeIngredients.size(); k++) {
-                            if (recipeIngredients.get(k).contains(selectedItems.get(j))){
-                                count++;
-                                finalIngredients.add(selectedItems.get(j));
-                            }
+                    //k for ingredients
+                    for (int k = 0; k < recipeIngredients.size(); k++) {
+                        if (recipeIngredients.get(k).contains(selectedItems.get(j))){
+                            count++;
+                            finalIngredients.add(selectedItems.get(j));
                         }
-
                     }
 
-                    divide = (double) count/myRecipes.get(i).getNoOfIngredients();
-                    if (divide*100>=80) {
-                        arrayListToLv.add(myRecipes.get(i).getReName());
-                    }
-                    count = 0;
                 }
-                lv.setAdapter(arrayAdapter);
-            }
 
+                divide = (double) count/myRecipes.get(i).getNoOfIngredients();
+                if (divide*100>=80) {
+                    arrayListToLv.add(myRecipes.get(i).getReName());
+                }
+                count = 0;
+            }
+            lv.setAdapter(arrayAdapter);
+        }
 
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {

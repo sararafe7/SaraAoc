@@ -83,7 +83,7 @@ public class CameraActivity extends AppCompatActivity implements View.OnClickLis
                 }
             }
             else {
-            Toast.makeText(this, "Could not select image or take photo", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Could not select image or take a photo", Toast.LENGTH_LONG).show();
         }
     }
 }

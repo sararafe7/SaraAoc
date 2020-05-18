@@ -38,38 +38,41 @@ public class MealsActivity extends AppCompatActivity implements View.OnClickList
         btnIngCheck = findViewById(R.id.btnIngCheck);
         btnIngCheck.setOnClickListener(this);
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(MealsActivity.this);
-//        if (MealName() != null) {
-        builder.setMessage("Since It Is " + HourMinute() + ", Would You Like to See The "
-                + MealName() + "'s Prepared Meals?");
-        builder.setCancelable(false);
-        builder.setNegativeButton("I Have Something Else in mind", null);
+        if (MealName() != null) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(MealsActivity.this);
 
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                if (MealName().equals("Breakfast")) {
-                    Intent intent = new Intent(MealsActivity.this, BreakfastActivity.class);
-                    startActivity(intent);
-                }
-                if (MealName().equals("Lunch")) {
-                    Intent intent = new Intent(MealsActivity.this, LunchActivity.class);
-                    startActivity(intent);
-                }
-                if (MealName().equals("Dinner")) {
-                    Intent intent = new Intent(MealsActivity.this, DinnerActivity.class);
-                    startActivity(intent);
-                }
-                if (MealName().equals("Sweets")) {
-                    Intent intent = new Intent(MealsActivity.this, SweetsActivity.class);
-                    startActivity(intent);
-                }
-            }
-        });
+            builder.setMessage("Since It Is " + HourMinute() + ", Would You Like to See The "
+                    + MealName() + "'s Prepared Meals?");
+            builder.setCancelable(false);
+            builder.setNegativeButton("I Have Something Else in mind", null);
 
-        AlertDialog dialog = builder.create();
-        dialog.show();
+            builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    if (MealName().equals("Breakfast")) {
+                        Intent intent = new Intent(MealsActivity.this, BreakfastActivity.class);
+                        startActivity(intent);
+                    }
+                    if (MealName().equals("Lunch")) {
+                        Intent intent = new Intent(MealsActivity.this, LunchActivity.class);
+                        startActivity(intent);
+                    }
+                    if (MealName().equals("Dinner")) {
+                        Intent intent = new Intent(MealsActivity.this, DinnerActivity.class);
+                        startActivity(intent);
+                    }
+                    if (MealName().equals("Sweets")) {
+                        Intent intent = new Intent(MealsActivity.this, SweetsActivity.class);
+                        startActivity(intent);
+                    }
 
+                }
+
+            });
+
+            AlertDialog dialog = builder.create();
+            dialog.show();
+        }
 }
 
     @Override

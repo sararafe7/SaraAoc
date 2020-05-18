@@ -11,6 +11,18 @@
         android:layout_width="match_parent"
         android:layout_height="112dp" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:fontFamily="@font/pontano_sans"
+        android:gravity="center"
+        android:outlineAmbientShadowColor="#00131212"
+        android:text="Welcome to Cooking Corner!"
+        android:textColorHighlight="#00753D3D"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="wrap_content"
@@ -36,7 +48,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="SignIn" />
+        android:text="Sign In" />
 
     <Space
         android:layout_width="match_parent"

@@ -11,9 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MealsActivity"></activity>
+        <activity android:name=".LogInActivity"></activity>
         <activity android:name=".PreparedRecipeActivity" />
-        <activity android:name=".CheckedActivity" />
         <activity android:name=".ExperimentActivity" />
         <activity android:name=".AllRecipesActivity" />
         <activity android:name=".AddRecipeActivity" />
@@ -25,7 +24,7 @@
         <activity android:name=".BreakfastActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".CameraActivity" />
-        <activity android:name=".LogInActivity">
+        <activity android:name=".MealsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

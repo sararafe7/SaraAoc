@@ -20,15 +20,15 @@
         android:layout_height="125dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="202dp"
-        android:layout_marginBottom="432dp"
+        android:layout_marginRight="209dp"
+        android:layout_marginBottom="474dp"
         android:layout_weight="1"
-        android:text="Bowties and Broccoli"
         android:background="@drawable/bowtiesbroccoli"
         android:fontFamily="@font/fanwood_text"
         android:gravity="top"
+        android:text="Bowties and Broccoli"
         android:textColor="#698FB1"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/dinnerBtn2"
